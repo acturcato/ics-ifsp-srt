@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Projetos - IFSP SRT</title>
+    <title>Dashboard de Projetos - IFSP-SRT</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
@@ -300,10 +300,10 @@
         }
     </style>
 </head>
-<body>
+<body onload="loadFromUrl()">
     <div class="header">
         <h1>📊 Dashboard de Projetos de Pesquisa</h1>
-        <p>IFSP - Campus Sertãozinho</p>
+        <p>IFSP - Sertãozinho</p>
         <div class="sync-status">
             <div class="sync-dot"></div>
             <span id="syncStatus">Carregando...</span>
@@ -311,7 +311,7 @@
     </div>
 
     <div class="container">
-        <div class="config-card">
+        <div class="config-card" hidden>
             <h2>⚙️ Configuração da URL do CSV</h2>
             <div class="config-grid">
                 <input 
