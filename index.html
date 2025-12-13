@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Projetos - IFSP SRT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Projetos IC - IFSP SRT</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -366,6 +367,25 @@
                 </div>
             </div>
 
+			<!-- <div class="kpi-grid"> -->
+                <!-- <div class="kpi-card blue"> -->
+                    <!-- <h3>Total de Projetos em Execução</h3> -->
+                    <!-- <div class="value" id="totalProjetos_Execucao">0</div> -->
+                <!-- </div> -->
+                <!-- <div class="kpi-card green"> -->
+                    <!-- <h3>Coordenadores</h3> -->
+                    <!-- <div class="value" id="totalCoordenadores_Execucao">0</div> -->
+                <!-- </div> -->
+                <!-- <div class="kpi-card purple"> -->
+                    <!-- <h3>Editais</h3> -->
+                    <!-- <div class="value" id="totalEditais_Execucao">0</div> -->
+                <!-- </div> -->
+                <!-- <div class="kpi-card orange"> -->
+                    <!-- <h3>Períodos</h3> -->
+                    <!-- <div class="value" id="totalPeriodos_Execucao">0</div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+
             <div class="filters">
                 <h2>🔍 Filtros</h2>
                 <div class="filter-grid">
@@ -397,7 +417,7 @@
                     </div>
                 </div>
                 <div class="chart-card">
-                    <h3>Top 10 Editais</h3>
+                    <h3>Editais</h3>
                     <div class="chart-container">
                         <canvas id="editalChart"></canvas>
                     </div>
@@ -554,6 +574,9 @@
                 option.textContent = s;
                 situacaoSelect.appendChild(option);
             });
+			//Seta o EM EXECUÇÃO como opção inicial selecionada e aplica o filtro
+			situacaoSelect.value = "Em execução";
+			applyFilters();
 
             const periodoSelect = document.getElementById('periodoFilter');
             periodoSelect.innerHTML = '<option value="">Todos os Períodos</option>';
@@ -678,7 +701,7 @@
                 if (d.PERIODO) counts[d.PERIODO] = (counts[d.PERIODO] || 0) + 1;
             });
 
-            const sorted = Object.entries(counts).sort((a, b) => a[0] - b[0]);
+            const sorted = Object.entries(counts).sort((a, b) => b[0] - a[0]);
 
             const ctx = document.getElementById('periodoChart').getContext('2d');
             if (charts.periodo) charts.periodo.destroy();
@@ -697,6 +720,7 @@
                     }]
                 },
 				options: {
+					indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
 					plugins: {
@@ -734,7 +758,7 @@
 
             const sorted = Object.entries(counts)
                 .sort((a, b) => b[1] - a[1])
-                .slice(0, 10);
+                //.slice(0, 10);	//seleciona o TOP10
 
             const ctx = document.getElementById('editalChart').getContext('2d');
             if (charts.edital) charts.edital.destroy();
@@ -808,8 +832,13 @@
             document.getElementById('totalFiltrados').textContent = filteredData.length;
             const tbody = document.querySelector('#projetosTable tbody');
             tbody.innerHTML = '';
+			
+			//Ordena por Coordenador
+			sortedFilteredData = Array.from(filteredData).sort((a, b) => {
+			  return a.COORDENADOR.localeCompare(b.COORDENADOR);
+			});
 
-            filteredData.slice(0, 50).forEach(item => {
+            sortedFilteredData.slice(0, 50).forEach(item => {
                 const tr = document.createElement('tr');
                 
                 let badgeClass = 'outros';
