@@ -269,7 +269,8 @@
         }
 
         .badge.concluido { background: #d1fae5; color: #065f46; }
-        .badge.andamento { background: #dbeafe; color: #1e40af; }
+        .badge.andamento { background: #fef6db; color: #374151; }
+        .badge.selecao { background: #fcd8ca; color: #374151; }
         .badge.outros { background: #f3f4f6; color: #374151; }
 
         .loading {
@@ -305,7 +306,7 @@
 </head>
 <body onload="loadFromUrl()">
     <div class="header">
-        <h1>📊 Dashboard de Projetos de Pesquisa</h1>
+        <h1>📊 Projetos IC - IFSP SRT</h1>
         <p>IFSP - Campus Sertãozinho</p>
         <div class="sync-status">
             <div class="sync-dot"></div>
@@ -321,7 +322,7 @@
                     type="text" 
                     id="csvUrl" 
                     placeholder="Cole aqui a URL do arquivo CSV (ex: https://exemplo.com/ICs_IFSPSRT.csv)"
-                    value="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/ICs_IFSP-SRT.csv">
+                    value="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/ICs_IFSP-SRT.csv"
                 <button onclick="loadFromUrl()">Carregar Dados</button>
             </div>
             <div class="config-options">
@@ -543,6 +544,9 @@
         // Event listeners para configuração
         document.getElementById('autoRefresh').addEventListener('change', startAutoRefresh);
         document.getElementById('refreshInterval').addEventListener('change', startAutoRefresh);
+
+		//Limpa o cache
+		//localStorage.clear();
 
         // Carregar URL salva ao iniciar
         window.addEventListener('load', () => {
@@ -843,7 +847,8 @@
                 
                 let badgeClass = 'outros';
                 if (item.SITUACAO === 'Concluído') badgeClass = 'concluido';
-                else if (item.SITUACAO === 'Em andamento') badgeClass = 'andamento';
+                else if (item.SITUACAO === 'Em execução') badgeClass = 'andamento';
+				else if (item.SITUACAO === 'Em Seleção') badgeClass = 'selecao';
 				
 				tr.title = "ÁREA: " + item.AREA + "\r\n" + item.RESUMO;
 				
