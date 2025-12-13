@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Projetos - IFSP-SRT</title>
+    <title>Dashboard de Projetos - IFSP SRT</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <style>
         * {
             margin: 0;
@@ -303,7 +305,7 @@
 <body onload="loadFromUrl()">
     <div class="header">
         <h1>📊 Dashboard de Projetos de Pesquisa</h1>
-        <p>IFSP - Sertãozinho</p>
+        <p>IFSP - Campus Sertãozinho</p>
         <div class="sync-status">
             <div class="sync-dot"></div>
             <span id="syncStatus">Carregando...</span>
@@ -330,9 +332,9 @@
                     Intervalo:
                     <select id="refreshInterval">
                         <option value="30">30 segundos</option>
-                        <option value="60" selected>1 minuto</option>
+                        <option value="60">1 minuto</option>
                         <option value="300">5 minutos</option>
-                        <option value="600">10 minutos</option>
+                        <option value="600" selected>10 minutos</option>
                         <option value="1800">30 minutos</option>
                     </select>
                 </label>
@@ -367,7 +369,7 @@
             <div class="filters">
                 <h2>🔍 Filtros</h2>
                 <div class="filter-grid">
-                    <input type="text" id="searchInput" placeholder="Buscar título/coordenador...">
+                    <input type="text" id="searchInput" placeholder="Buscar título/coordenador/área...">
                     <select id="situacaoFilter">
                         <option value="">Todas as Situações</option>
                     </select>
@@ -400,7 +402,7 @@
                         <canvas id="editalChart"></canvas>
                     </div>
                 </div>
-                <div class="chart-card">
+                <div class="chart-card" hidden>
                     <h3>Top 10 Coordenadores</h3>
                     <div class="chart-container">
                         <canvas id="coordenadorChart"></canvas>
@@ -532,7 +534,9 @@
         });
 
         function initDashboard() {
-            populateFilters();
+            Chart.register(ChartDataLabels);
+			
+			populateFilters();
             updateDashboard();
             setupEventListeners();
         }
@@ -586,7 +590,8 @@
             filteredData = allData.filter(item => {
                 const matchSearch = !search || 
                     (item.TITULO && item.TITULO.toLowerCase().includes(search)) ||
-                    (item.COORDENADOR && item.COORDENADOR.toLowerCase().includes(search));
+                    (item.COORDENADOR && item.COORDENADOR.toLowerCase().includes(search)) ||
+                    (item.AREA && item.AREA.toLowerCase().includes(search));
                 const matchSituacao = !situacao || item.SITUACAO === situacao;
                 const matchPeriodo = !periodo || item.PERIODO == periodo;
                 const matchEdital = !edital || item.EDITAL === edital;
@@ -652,7 +657,16 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'bottom' }
+                        legend: { position: 'bottom' },
+						datalabels: {
+							color: 'white', // Color of the labels
+							font: {
+								weight: 'bold',
+							},
+							formatter: function (value, context) {
+								return value; // Display the actual data value
+							}
+						}
                     }
                 }
             });
@@ -668,26 +682,47 @@
 
             const ctx = document.getElementById('periodoChart').getContext('2d');
             if (charts.periodo) charts.periodo.destroy();
-
+			
             charts.periodo = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: sorted.map(s => s[0]),
                     datasets: [{
                         label: 'Projetos',
                         data: sorted.map(s => s[1]),
+						borderWidth: 0,
                         borderColor: '#3b82f6',
-                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        backgroundColor: 'rgba(0, 0, 246, 0.5)',
                         tension: 0.4
                     }]
                 },
-                options: {
+				options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
+					plugins: {
+						legend: { display: false },
+						<!-- title: { -->
+							<!-- display: true, -->
+							<!-- text: 'Release Year of Web Frameworks', -->
+							<!-- color: 'black', -->
+							<!-- font: { -->
+								<!-- weight: 'bold', -->
+								<!-- size: 20 -->
+							<!-- } -->
+						<!-- }, -->
+						datalabels: {
+							anchor: 'end', // Position of the labels (start, end, center, etc.)
+							align: 'end', // Alignment of the labels (start, end, center, etc.)
+							color: 'gray', // Color of the labels
+							font: {
+								weight: 'bold',
+							},
+							formatter: function (value, context) {
+								return value; // Display the actual data value
+							}
+						}
+					}
+				}
             });
         }
 
@@ -719,7 +754,18 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { display: false }
+                        legend: { display: false },
+						datalabels: {
+							anchor: 'end', // Position of the labels (start, end, center, etc.)
+							align: 'end', // Alignment of the labels (start, end, center, etc.)
+							color: 'gray', // Color of the labels
+							font: {
+								weight: 'bold',
+							},
+							formatter: function (value, context) {
+								return value; // Display the actual data value
+							}
+						}
                     }
                 }
             });
@@ -769,7 +815,9 @@
                 let badgeClass = 'outros';
                 if (item.SITUACAO === 'Concluído') badgeClass = 'concluido';
                 else if (item.SITUACAO === 'Em andamento') badgeClass = 'andamento';
-
+				
+				tr.title = "ÁREA: " + item.AREA + "\r\n" + item.RESUMO;
+				
                 tr.innerHTML = `
                     <td>${item.TITULO || ''}</td>
                     <td>${item.COORDENADOR || ''}</td>
@@ -780,7 +828,7 @@
                 tbody.appendChild(tr);
             });
 
-            if (filteredData.length > 50) {
+            if (filteredData.length > 100) {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td colspan="5" style="text-align: center; color: #6b7280;">
                     Mostrando 50 de ${filteredData.length} projetos
