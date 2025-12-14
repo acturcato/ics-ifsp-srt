@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Projetos IC - IFSP SRT</title>
+    <title>Projetos IC - IFSP-SRT</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -18,7 +18,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e3f2fd 100%);
+            background: linear-gradient(135deg, #f1f1f1 0%, #d1d1d1 100%);
             min-height: 100vh;
         }
 
@@ -138,10 +138,10 @@
 
         .kpi-card {
             background: white;
-            padding: 1.5rem;
+            padding: 0.5rem;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid;
+            border-left: 7px solid;
         }
 
         .kpi-card.blue { border-color: #3b82f6; }
@@ -157,8 +157,9 @@
         }
 
         .kpi-card .value {
-            font-size: 2.5rem;
+            font-size: 3.0rem;
             font-weight: bold;
+			text-align: center;
             color: #1f2937;
         }
 
@@ -306,8 +307,17 @@
 </head>
 <body onload="loadFromUrl()">
     <div class="header">
-        <h1>📊 Projetos IC - IFSP SRT</h1>
-        <p>IFSP - Campus Sertãozinho</p>
+		<table style="border: 0; border-collapse: collapse;">
+		<tr style="border: 0;">
+		<td width="40" style="border: 0;">
+        <a href="http://srt.ifsp.edu.br"><img src="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/logoIFSP.png" alt="Logo IFSP" width="37" height="50" style="border:1px solid black"></a>
+		</td>
+		<td style="border: 0; text-align: left;">
+		<h1>Projetos IC - IFSP-SRT</h1>
+		</td>
+		</tr>
+		</table>
+        <!-- <p>IFSP - Campus Sertãozinho</p> -->
         <div class="sync-status">
             <div class="sync-dot"></div>
             <span id="syncStatus">Carregando...</span>
@@ -368,26 +378,7 @@
                 </div>
             </div>
 
-			<!-- <div class="kpi-grid"> -->
-                <!-- <div class="kpi-card blue"> -->
-                    <!-- <h3>Total de Projetos em Execução</h3> -->
-                    <!-- <div class="value" id="totalProjetos_Execucao">0</div> -->
-                <!-- </div> -->
-                <!-- <div class="kpi-card green"> -->
-                    <!-- <h3>Coordenadores</h3> -->
-                    <!-- <div class="value" id="totalCoordenadores_Execucao">0</div> -->
-                <!-- </div> -->
-                <!-- <div class="kpi-card purple"> -->
-                    <!-- <h3>Editais</h3> -->
-                    <!-- <div class="value" id="totalEditais_Execucao">0</div> -->
-                <!-- </div> -->
-                <!-- <div class="kpi-card orange"> -->
-                    <!-- <h3>Períodos</h3> -->
-                    <!-- <div class="value" id="totalPeriodos_Execucao">0</div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-            <div class="filters">
+			<div class="filters">
                 <h2>🔍 Filtros</h2>
                 <div class="filter-grid">
                     <input type="text" id="searchInput" placeholder="Buscar título/coordenador/área...">
