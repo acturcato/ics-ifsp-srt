@@ -18,7 +18,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f1f1f1 0%, #d1d1d1 100%);
+			background: linear-gradient(135deg, #f1f1f1 0%, #d1d1d1 100%);
             min-height: 100vh;
         }
 
@@ -88,7 +88,9 @@
         .config-grid {
             display: grid;
             grid-template-columns: 1fr auto;
-            gap: 1rem;
+			grid-template-rows: repeat(6, auto);
+			grid-auto-flow: column;
+			gap: 0px 0px;
             align-items: end;
         }
 
@@ -203,10 +205,30 @@
         .filter-grid button:hover {
             background: #dc2626;
         }
+		
+		.filter-grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+		.filter-grid-buttons button {
+			width: 100%;
+			display: block;
+			padding: 1.00rem;
+            background: #0a0a0a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
 
         .charts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            <!-- grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); -->
+            grid-template-columns: 1fr;
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -258,7 +280,7 @@
         }
 
         tr:hover {
-            background: #f9fafb;
+            background: #d7fcd8;
         }
 
         .badge {
@@ -310,7 +332,7 @@
 		<table style="border: 0; border-collapse: collapse;">
 		<tr style="border: 0;">
 		<td width="40" style="border: 0;">
-        <a href="http://srt.ifsp.edu.br"><img src="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/logoIFSP.png" alt="Logo IFSP" width="37" height="50" style="border:1px solid black"></a>
+        <a href="http://srt.ifsp.edu.br"><img src="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/logoIFSP_H.png" alt="Logo IFSP" width="200" height="60" style="border:0px solid black"></a>
 		</td>
 		<td style="border: 0; text-align: left;">
 		<h1>Projetos IC - IFSP-SRT</h1>
@@ -373,12 +395,12 @@
                     <div class="value" id="totalEditais">0</div>
                 </div>
                 <div class="kpi-card orange">
-                    <h3>Períodos</h3>
+                    <h3>Anos</h3>
                     <div class="value" id="totalPeriodos">0</div>
                 </div>
             </div>
 
-			<div class="filters">
+            <div class="filters">
                 <h2>🔍 Filtros</h2>
                 <div class="filter-grid">
                     <input type="text" id="searchInput" placeholder="Buscar título/coordenador/área...">
@@ -386,7 +408,7 @@
                         <option value="">Todas as Situações</option>
                     </select>
                     <select id="periodoFilter">
-                        <option value="">Todos os Períodos</option>
+                        <option value="">Todos os Anos</option>
                     </select>
                     <select id="editalFilter">
                         <option value="">Todos os Editais</option>
@@ -403,7 +425,7 @@
                     </div>
                 </div>
                 <div class="chart-card">
-                    <h3>Projetos por Período</h3>
+                    <h3>Projetos por Ano</h3>
                     <div class="chart-container">
                         <canvas id="periodoChart"></canvas>
                     </div>
@@ -422,6 +444,20 @@
                 </div>
             </div>
 
+			<div class="table-card filter-grid-buttons filter-grid-buttons">
+				<h3>Ordenar tabela por:</h3>
+                <table id="botoesTable">
+					    <thead>
+                            <th><button onclick="ordenaTabelaPorCoordenador_DESC()">Coordenador &#x21e7</button></th>
+                            <th><button onclick="ordenaTabelaPorCoordenador_ASC()">Coordenador &#x21e9</button></th>
+                            <th><button onclick="ordenaTabelaPorAno_DESC()">Ano &#x21e7</button></th>
+                            <th><button onclick="ordenaTabelaPorAno_ASC()">Ano &#x21e9</button></th>
+						</thead>
+						<tbody></tbody>
+                </table>
+            </div>
+
+
             <div class="table-card">
                 <h3>Lista de Projetos (<span id="totalFiltrados">0</span>)</h3>
                 <table id="projetosTable">
@@ -430,7 +466,7 @@
                             <th>Título</th>
                             <th>Coordenador</th>
                             <th>Situação</th>
-                            <th>Período</th>
+                            <th>Ano</th>
                             <th>Edital</th>
                         </tr>
                     </thead>
@@ -443,6 +479,7 @@
     <script>
         let allData = [];
         let filteredData = [];
+		let filteredData_sorted = [];
         let charts = {};
         let refreshTimer = null;
 
@@ -491,7 +528,9 @@
                         if (results.data && results.data.length > 0) {
                             allData = results.data;
                             filteredData = allData;
-                            initDashboard();
+							filteredData_sorted = filteredData;
+                            
+							initDashboard();
                             document.getElementById('dashboard').style.display = 'block';
                             
                             const now = new Date().toLocaleTimeString('pt-BR');
@@ -574,7 +613,7 @@
 			applyFilters();
 
             const periodoSelect = document.getElementById('periodoFilter');
-            periodoSelect.innerHTML = '<option value="">Todos os Períodos</option>';
+            periodoSelect.innerHTML = '<option value="">Todos os Anos</option>';
             periodos.forEach(p => {
                 const option = document.createElement('option');
                 option.value = p;
@@ -617,7 +656,9 @@
                 return matchSearch && matchSituacao && matchPeriodo && matchEdital;
             });
 
+			filteredData_sorted = filteredData;
             updateDashboard();
+			ordenaTabelaPorAno_DESC()
         }
 
         function resetFilters() {
@@ -626,7 +667,10 @@
             document.getElementById('periodoFilter').value = '';
             document.getElementById('editalFilter').value = '';
             filteredData = allData;
+			
+			filteredData_sorted = filteredData;
             updateDashboard();
+			ordenaTabelaPorAno_DESC()
         }
 
         function updateDashboard() {
@@ -715,7 +759,7 @@
                     }]
                 },
 				options: {
-					indexAxis: 'y',
+					<!-- indexAxis: 'y', -->
                     responsive: true,
                     maintainAspectRatio: false,
 					plugins: {
@@ -823,15 +867,50 @@
             });
         }
 
+		function ordenaTabelaPorCoordenador_DESC() {	
+			//Ordena por Coordenador
+			filteredData_sorted = Array.from(filteredData).sort((b, a) => {
+			  return (a.COORDENADOR.localeCompare(b.COORDENADOR) || (a.PERIODO - b.PERIODO));
+			});
+			updateTable();
+		}
+
+		function ordenaTabelaPorCoordenador_ASC() {	
+			//Ordena por Coordenador
+			filteredData_sorted = Array.from(filteredData).sort((a, b) => {
+			  return (a.COORDENADOR.localeCompare(b.COORDENADOR) || (a.PERIODO - b.PERIODO));
+			});
+			updateTable();
+		}
+		
+		function ordenaTabelaPorAno_DESC() {
+			//Ordena por Ano
+			filteredData_sorted = Array.from(filteredData).sort((b, a) => {
+			  return a.PERIODO - b.PERIODO;
+			});
+			updateTable();
+		}
+		
+		function ordenaTabelaPorAno_ASC() {
+			//Ordena por Ano
+			filteredData_sorted = Array.from(filteredData).sort((a, b) => {
+			  return a.PERIODO - b.PERIODO;
+			});
+			updateTable();
+		}
+
         function updateTable() {
             document.getElementById('totalFiltrados').textContent = filteredData.length;
             const tbody = document.querySelector('#projetosTable tbody');
             tbody.innerHTML = '';
 			
 			//Ordena por Coordenador
-			sortedFilteredData = Array.from(filteredData).sort((a, b) => {
-			  return a.COORDENADOR.localeCompare(b.COORDENADOR);
-			});
+			<!-- sortedFilteredData = Array.from(filteredData).sort((a, b) => { -->
+			  <!-- return a.COORDENADOR.localeCompare(b.COORDENADOR); -->
+			<!-- }); -->
+			
+			// Pega os valores ordenados
+			sortedFilteredData = filteredData_sorted;
 
             sortedFilteredData.slice(0, 50).forEach(item => {
                 const tr = document.createElement('tr');
