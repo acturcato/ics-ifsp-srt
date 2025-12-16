@@ -1,191 +1,265 @@
 index,COORDENADOR,TITULO,SITUACAO,PERIODO,EDITAL,AREA,RESUMO
--1,Marília Guimarães Pinheiro,Avaliação da aplicação da Lei 10.639 sob o foco dos estudantes de ensino médio técnico integrado de uma unidade do IFSP,Concluído,2020,PIBIFSP,NaN,Indisponível
--2,Michele Cristine Cruz da Costa,FNB - Frente Negra Brasileira: de São Paulo ao esquecimento em Brodowski,Concluído,2020,PIBIFSP,NaN,Indisponível
--3,Rubens Francisco Ventrici de Souza,Avaliação da atividade antioxidante de extratos de plantas medicinais brasileiras,Concluído,2020,PIBIFSP,NaN,Indisponível
--4,Elisabeth da Silva Macena,O ensino de literaturas em língua inglesa: uma proposta didática,Concluído,2020,PIBIFSP,NaN,Indisponível
--5,Marina Caprio,Educação sexual e base nacional comum curricular (BNCC): avanços e retrocessos,Concluído,2020,PIBIFSP,NaN,Indisponível
--6,Marcos Eduardo Paron,Estudo fitoquímico de Hypericum perforatum L. (erva- de-São-João) para detecção de fraude,Concluído,2020,PIBIFSP,NaN,Indisponível
--7,Nemésio Freitas Duarte Filho,Criação de um jogo eletrônico educativo para auxiliar o ensino das competências no curso de engenharia elétrica,Concluído,2020,PIBIFSP,NaN,Indisponível
--8,Afonso Celso Turcato,Desenvolvimento de um receptor standalone para o sistema Votoino,Concluído,2020,PIBIFSP,NaN,Indisponível
--9,Estela de Sousa Rossetto,Guia de campo das borboletas e mariposas diurnas do IFSP-Sertãozinho,Concluído,2020,PIBIFSP,NaN,Indisponível
--10,Andre Luis Dias,Sistema de diagnóstico para falhas em bombas hidráulicas por meio de análise de corrente elétrica e ferramentas de aprendizagem de máquinas,Concluído,2020,PIBIFSP,NaN,Indisponível
--11,Olavo Henrique Menin,Modelos epidêmicos compartimentais: estudo analítico e numérico,Concluído,2020,PIBIFSP,NaN,Indisponível
--12,Ailson Vasconcelos da Cunha,As representações de cientistas nos livros didáticos,Concluído,2020,PIBIFSP,NaN,Indisponível
--13,Maria Beatriz Gameiro Cordeiro,Análise do projeto de texto em redações dissertativas de estudantes de escola pública e privada,Concluído,2020,PIBIFSP,NaN,Indisponível
--14,Francisco de Araújo Silva,"Nanofilmes semicondutores a base N,N'-bis(tris(hidroximetil)aminometano)-1,4,5,8-nafataleno diimida",Concluído,2020,PIBIFSP,NaN,Indisponível
--15,Riama Coelho Gouveia,Fabricação e caracterização de dispositivos baseados em filmes finos e nanoestruturas de óxido de zinco,Concluído,2020,PIBIFSP,NaN,Indisponível
--16,Jean Carlos Rodrigues da Silva,Reaproveitamento do bagaço do malte resultante da produção de cerveja para produção de celulases por Trichoderma reesei,Concluído,2020,PIBIFSP,NaN,Indisponível
--17,Gisele Baraldi Messiano,Estudo fitoquímico das flores de Humulus lupulus (lúpulo),Concluído,2020,PIBIFSP,NaN,Indisponível
--18,Marcos Alves Fontes,Desenvolvimento de um sistema eletrônico para monitoramento da velocidade de nado de um atleta deficiente auditivo,Concluído,2020,PIBIFSP,NaN,Indisponível
--19,Antonio Carlos de Souza,"Concepção, projeto e construção de uma estação de trabalho em escala para compor uma célula de manufatura integrada e estruturada nos conceitos de manufatura enxuta e indústria 4.0",Concluído,2020,PIBIFSP,NaN,Indisponível
--20,Pio Antonio de Figueiredo,"Projeto de montagem, instalação e procedimentos operacionais para o laboratório de acionamento, comando e proteção de máquinas do IFSP-SRT",Concluído,2020,PIBIFSP,NaN,Indisponível
--21,Marina Caprio,A BNCC e a educação inclusiva: uma análise sobre a abordagem da inclusão social e formação docente,Concluído,2020,PIBIFSP,NaN,Indisponível
--22,Gisele Baraldi Messiano,Busca de novos esqueletos carbônicos com atividades biológicas da espécia Aristolochia malmeana,Concluído,2020,PIBIFSP,NaN,Indisponível
--23,Ailson Vasconcelos da Cunha,As atividades experimentais no livro didático e a BNCC,Concluído,2020,PIBIFSP,NaN,Indisponível
--24,Elizabeth da Silva Macena,O olhar do jovem narrador de O apanhador no campo de centeio: um exercício de crítica literária,Concluído,2020,PIBIFSP,NaN,Indisponível
--25,Paula Garcia da Costa Petean,Utilização do bagaço de laranja para a produção de farinha com alto em fibras,Concluído,2020,PIBIFSP,NaN,Indisponível
--26,Paula Garcia da Costa Petean,Determinação dos parâmetros físico-químicos de qualidade do mel de abelha,Concluído,2020,PIBIFSP,NaN,Indisponível
--27,Alexandre Montagna Rossini,O alcoolismo e a gestão de pessoas nas empresas da região de Ribeirão Preto,Concluído,2020,PIBIFSP,NaN,Indisponível
--28,Marina Caprio,"Vygotsky, a formação de conceitos científicos e o ensino de ciências da natureza",Concluído,2020,PIBIFSP,NaN,Indisponível
--29,Keila Angélica Peron,Processo de Peer Review: funcionamento e contribuições no Ensino Técnico Integrado de Química,Concluído,2020,PIBIFSP,NaN,Indisponível
--30,Riama Coelho Gouveia,"Construção de um radiotelescópio amador para atividades de ensino, pesquisa e",Concluído,2020,PIBIFSP,NaN,Indisponível
--31,Maria Beatriz Gameiro Cordeiro,Análise da estrutura sintática em redações dissertativas,Concluído,2020,PIBIFSP,NaN,Indisponível
--32,Olavo Henrique Menin,Redes complexas: desenvolvimento e aplicação na ciência e tecnologia,Concluído,2020,PIBIFSP,NaN,Indisponível
--33,Riama Coelho Gouveia,Construção e caracterização de transistores de efeito de campo com redes de nanofios de germânio,Concluído,2020,PIBIFSP,NaN,Indisponível
--34,Ailson Vasconcelos da Cunha,A atividade experimental no livro didático da área de ciências da natureza,Concluído,2020,PIBIFSP,NaN,Indisponível
--35,Jean Carlos Rodrigues da Silva,Desenvolvimento de processos fermentativos com leveduras Ale e Lager encapsuladas em alginato de cálcio na produção cervejeira,Concluído,2020,PIBIFSP,NaN,Indisponível
--36,Nemésio Freitas Duarte Filho,Eletric RPG: Jogo educacional com foco no auxílio do ensino e aprendizagem da disciplina de circuitos elétricos desenvolvido sobre a plataforma Unity,Concluído,2020,PIBIFSP,NaN,Indisponível
--37,Marcos Alves Fontes,Comparação das propriedades mecânica e microestrutural de bielas de ferro sintetizado nitretadas e nitrocarbonetadas a plasma,Concluído,2019,PIBIFSP,NaN,Indisponível
--38,Afonso Celso Turcato,Aperfeiçoamento do sistema eletrônico de respostas denominado Votoino,Concluído,2019,PIBIFSP,NaN,Indisponível
--39,Plínio Alexandre dos Santos Caetano,O projeto integrador do curso técnico em administração do Câmpus Sertãozinho do IFSP na perspectiva dos egressos do curso,Concluído,2019,PIBIFSP,NaN,Indisponível
--40,Estela de Sousa Rossetto,Olha o passarinho? Exercício de atenção e memória em um jogo paradidático sobre aves,Concluído,2019,PIBIFSP,NaN,Indisponível
--41,Giovana Siqueira Príncipe,A cartilha do participante para redação do Enem (2018) como agente de letramento e suas dimensões escondidas,Concluído,2019,PIBIFSP,NaN,Indisponível
--42,Francisco de Araújo Silva,"Compósitos de pentóxido de vanádio e N,N'-bis(4-carboximetil)-1,4,5,8-naftaleno diimida: produção e análise da eficiência em cátodos de bateria de íons lítio",Concluído,2019,PIBIFSP,NaN,Indisponível
--43,Nemésio Freitas Duarte Filho,Desenvolvimento de um sistema de aprendizagem móvel interativo para o museu tecnológico do câmpus de Sertãozinho,Concluído,2019,PIBIFSP,NaN,Indisponível
--44,Riama Coelho Gouveia,"Produção, caracterização estrutural e aplicação de nanopartículas metálicas em dispositivos",Concluído,2019,PIBIFSP,NaN,Indisponível
--45,Cláudia Dias de Barros,Folha internacional: anotação AMR em um corpus de notícias em inglês,Concluído,2019,PIBIFSP,NaN,Indisponível
--46,Rubens Francisco Ventrici de Souza,Desenvolvimento de um secador assistido por aquecimento infravermelho para secagem de bagaço de cana-de-açúcar,Concluído,2019,PIBIFSP,NaN,Indisponível
--47,Andreia Dias Ianuskiewtz,Gamificação como estratégia para revisão de conteúdo em aulas de língua inglesa,Concluído,2019,PIBIFSP,NaN,Indisponível
--48,Jean Carlos Rodrigues da Silva,"Reaproveitamento de resíduos da produção de cerveja para produção de enzimas industriais, bioetanol e outros produtos de maior valor agregado",Concluído,2019,PIBIFSP,NaN,Indisponível
--49,Luiz Carlos Leal Junior,A constituição do pensamento matemático através da resolução de problemas como prática sociointeracionista no ensino superior,Concluído,2019,PIBIFSP,NaN,Indisponível
--50,Maria Beatriz Gameiro Cordeiro,Estudo sociolinguístico sobre as variações na fala da terceira idade,Concluído,2019,PIBIFSP,NaN,Indisponível
--51,Marina Caprio,A formação de professores a partir da Base Nacional Comum Curricular (BNCC): análise do impacto na formação inicial.,Concluído,2019,PIBIFSP,NaN,Indisponível
--52,Elizabeth da Silva Macena,Letramento literário do licenciado em letras: uma proposta a partir da leitura de 1984 de George Orwell,Concluído,2019,PIBIFSP,NaN,Indisponível
--53,Andre Luis Dias,Proposta de um sistema de alimentação de brocas de Diatraeae saccharalis para o processo de inoculação de vespas Cotesia flavipes,Concluído,2019,PIBIFSP,NaN,Indisponível
--54,Cláudia Dias de Barros,Análise da estrutura argumental de verbos em um corpus jornalístico,Concluído,2019,PIBIFSP,NaN,Indisponível
--55,Pio Antonio de Figueiredo,Projeto microgeração energia solar compartilhada CPFL-IFSP Sertãozinho - Parte I - Smart Grid,Concluído,2019,PIBIFSP,NaN,Indisponível
--56,Marcos Alves Fontes,Comparação das propriedades mecânica e tribológica dos ferros fundidos nodulares austemperados e nitretados,Concluído,2019,PIBIFSP,NaN,Indisponível
--57,Andreia Dias Ianuskiewtz,Educação bilíngue: um estudo sobre suas metodologias e potencialidades,Concluído,2019,PIBIFSP,NaN,Indisponível
--58,Patrícia Aparecida Pinheiro,Elaboração de material didático auxiliar de Cálculo I,Concluído,2019,PIBIFSP,NaN,Indisponível
--59,Jefferson Ferreira do Nascimento,Estereótipos e estigmatização: uma análise sobre a prática do futebol feminino no município de Sertãozinho-SP,Concluído,2019,PIBIFSP,NaN,Indisponível
--60,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio,Concluído,2019,PIBIFSP,NaN,Indisponível
--61,Andre Luis Dias,Desenvolvimento de uma ferramenta baseada em Web para dimensionamento de equipamentos para acionamentos de motores elétricos,Concluído,2019,PIBIFSP,NaN,Indisponível
--62,Riama Coelho Gouveia,Desenvolvimento de sistema de medidas elétricas e optoeletrônicas para dispositivos nanotecnológicos,Concluído,2019,PIBIFSP,NaN,Indisponível
--63,Riama Coelho Gouveia,Abordagem interdisciplinar dos semicondutores na Educação Profissional e Tecnológica: estudo comparativo,Concluído,2019,PIBIFSP,NaN,Indisponível
+-1,Maria Beatriz Gameiro Cordeiro,Análise da estrutura sintática em redações dissertativas,Concluído,2020,PIBIFSP,NaN,Indisponível
+-2,Marina Caprio,"Vygotsky, a formação de conceitos científicos e o ensino de ciências da natureza",Concluído,2020,PIBIFSP,NaN,Indisponível
+-3,Riama Coelho Gouveia,Construção e caracterização de transistores de efeito de campo com redes de nanofios de germânio,Concluído,2020,PIBIFSP,NaN,Indisponível
+-4,Olavo Henrique Menin,Redes complexas: desenvolvimento e aplicação na ciência e tecnologia,Concluído,2020,PIBIFSP,NaN,Indisponível
+-5,Jean Carlos Rodrigues da Silva,Reaproveitamento do bagaço do malte resultante da produção de cerveja para produção de celulases por Trichoderma reesei,Concluído,2020,PIBIFSP,NaN,Indisponível
+-6,Nemésio Freitas Duarte Filho,Eletric RPG: Jogo educacional com foco no auxílio do ensino e aprendizagem da disciplina de circuitos elétricos desenvolvido sobre a plataforma Unity,Concluído,2020,PIBIFSP,NaN,Indisponível
+-7,Riama Coelho Gouveia,"Construção de um radiotelescópio amador para atividades de ensino, pesquisa e",Concluído,2020,PIBIFSP,NaN,Indisponível
+-8,Marina Caprio,A BNCC e a educação inclusiva: uma análise sobre a abordagem da inclusão social e formação docente,Concluído,2020,PIBIFSP,NaN,Indisponível
+-9,Alexandre Montagna Rossini,O alcoolismo e a gestão de pessoas nas empresas da região de Ribeirão Preto,Concluído,2020,PIBIFSP,NaN,Indisponível
+-10,Jean Carlos Rodrigues da Silva,Desenvolvimento de processos fermentativos com leveduras Ale e Lager encapsuladas em alginato de cálcio na produção cervejeira,Concluído,2020,PIBIFSP,NaN,Indisponível
+-11,Paula Garcia da Costa Petean,Determinação dos parâmetros físico-químicos de qualidade do mel de abelha,Concluído,2020,PIBIFSP,NaN,Indisponível
+-12,Paula Garcia da Costa Petean,Utilização do bagaço de laranja para a produção de farinha com alto em fibras,Concluído,2020,PIBIFSP,NaN,Indisponível
+-13,Elizabeth da Silva Macena,O olhar do jovem narrador de O apanhador no campo de centeio: um exercício de crítica literária,Concluído,2020,PIBIFSP,NaN,Indisponível
+-14,Ailson Vasconcelos da Cunha,As atividades experimentais no livro didático e a BNCC,Concluído,2020,PIBIFSP,NaN,Indisponível
+-15,Keila Angélica Peron,Processo de Peer Review: funcionamento e contribuições no Ensino Técnico Integrado de Química,Concluído,2020,PIBIFSP,NaN,Indisponível
+-16,Marília Guimarães Pinheiro,Avaliação da aplicação da Lei 10.639 sob o foco dos estudantes de ensino médio técnico integrado de uma unidade do IFSP,Concluído,2020,PIBIFSP,NaN,Indisponível
+-17,Ailson Vasconcelos da Cunha,A atividade experimental no livro didático da área de ciências da natureza,Concluído,2020,PIBIFSP,NaN,Indisponível
+-18,Gisele Baraldi Messiano,Busca de novos esqueletos carbônicos com atividades biológicas da espécia Aristolochia malmeana,Concluído,2020,PIBIFSP,NaN,Indisponível
+-19,Riama Coelho Gouveia,Fabricação e caracterização de dispositivos baseados em filmes finos e nanoestruturas de óxido de zinco,Concluído,2020,PIBIFSP,NaN,Indisponível
+-20,Antonio Carlos de Souza,"Concepção, projeto e construção de uma estação de trabalho em escala para compor uma célula de manufatura integrada e estruturada nos conceitos de manufatura enxuta e indústria 4.0",Concluído,2020,PIBIFSP,NaN,Indisponível
+-21,Maria Beatriz Gameiro Cordeiro,Análise do projeto de texto em redações dissertativas de estudantes de escola pública e privada,Concluído,2020,PIBIFSP,NaN,Indisponível
+-22,Ailson Vasconcelos da Cunha,As representações de cientistas nos livros didáticos,Concluído,2020,PIBIFSP,NaN,Indisponível
+-23,Olavo Henrique Menin,Modelos epidêmicos compartimentais: estudo analítico e numérico,Concluído,2020,PIBIFSP,NaN,Indisponível
+-24,Andre Luis Dias,Sistema de diagnóstico para falhas em bombas hidráulicas por meio de análise de corrente elétrica e ferramentas de aprendizagem de máquinas,Concluído,2020,PIBIFSP,NaN,Indisponível
+-25,Estela de Sousa Rossetto,Guia de campo das borboletas e mariposas diurnas do IFSP-Sertãozinho,Concluído,2020,PIBIFSP,NaN,Indisponível
+-26,Afonso Celso Turcato,Desenvolvimento de um receptor standalone para o sistema Votoino,Concluído,2020,PIBIFSP,NaN,Indisponível
+-27,Nemésio Freitas Duarte Filho,Criação de um jogo eletrônico educativo para auxiliar o ensino das competências no curso de engenharia elétrica,Concluído,2020,PIBIFSP,NaN,Indisponível
+-28,Pio Antonio de Figueiredo,"Projeto de montagem, instalação e procedimentos operacionais para o laboratório de acionamento, comando e proteção de máquinas do IFSP-SRT",Concluído,2020,PIBIFSP,NaN,Indisponível
+-29,Marcos Eduardo Paron,Estudo fitoquímico de Hypericum perforatum L. (erva- de-São-João) para detecção de fraude,Concluído,2020,PIBIFSP,NaN,Indisponível
+-30,Marina Caprio,Educação sexual e base nacional comum curricular (BNCC): avanços e retrocessos,Concluído,2020,PIBIFSP,NaN,Indisponível
+-31,Elisabeth da Silva Macena,O ensino de literaturas em língua inglesa: uma proposta didática,Concluído,2020,PIBIFSP,NaN,Indisponível
+-32,Rubens Francisco Ventrici de Souza,Avaliação da atividade antioxidante de extratos de plantas medicinais brasileiras,Concluído,2020,PIBIFSP,NaN,Indisponível
+-33,Marcos Alves Fontes,Desenvolvimento de um sistema eletrônico para monitoramento da velocidade de nado de um atleta deficiente auditivo,Concluído,2020,PIBIFSP,NaN,Indisponível
+-34,Michele Cristine Cruz da Costa,FNB - Frente Negra Brasileira: de São Paulo ao esquecimento em Brodowski,Concluído,2020,PIBIFSP,NaN,Indisponível
+-35,Gisele Baraldi Messiano,Estudo fitoquímico das flores de Humulus lupulus (lúpulo),Concluído,2020,PIBIFSP,NaN,Indisponível
+-36,Francisco de Araújo Silva,"Nanofilmes semicondutores a base N,N'-bis(tris(hidroximetil)aminometano)-1,4,5,8-nafataleno diimida",Concluído,2020,PIBIFSP,NaN,Indisponível
+-37,Paula Garcia da Costa Petean,Utilização do bagaço de laranja para a produção de farinha com alto em fibras,Concluído,2020,PIVICT,NaN,Indisponível
+-38,Marina Caprio,A BNCC e a educação inclusiva: uma análise sobre a abordagem da inclusão social e formação docente,Concluído,2020,PIVICT,NaN,Indisponível
+-39,Nemésio Freitas Duarte Filho,Eletric RPG: Jogo educacional com foco no auxílio do ensino e aprendizagem da disciplina de circuitos elétricos desenvolvido sobre a plataforma Unity,Concluído,2020,PIVICT,NaN,Indisponível
+-40,Marília Guimarães Pinheiro,Avaliação da aplicação da Lei 10.639 sob o foco dos estudantes de ensino médio técnico integrado de uma unidade do IFSP,Concluído,2020,PIVICT,NaN,Indisponível
+-41,Keila Angélica Peron,Processo de Peer Review: funcionamento e contribuições no Ensino Técnico Integrado de Química,Concluído,2020,PIVICT,NaN,Indisponível
+-42,Ailson Vasconcelos da Cunha,As atividades experimentais no livro didático e a BNCC,Concluído,2020,PIVICT,NaN,Indisponível
+-43,Elizabeth da Silva Macena,O olhar do jovem narrador de O apanhador no campo de centeio: um exercício de crítica literária,Concluído,2020,PIVICT,NaN,Indisponível
+-44,Riama Coelho Gouveia,"Construção de um radiotelescópio amador para atividades de ensino, pesquisa e",Concluído,2020,PIVICT,NaN,Indisponível
+-45,Paula Garcia da Costa Petean,Determinação dos parâmetros físico-químicos de qualidade do mel de abelha,Concluído,2020,PIVICT,NaN,Indisponível
+-46,Alexandre Montagna Rossini,O alcoolismo e a gestão de pessoas nas empresas da região de Ribeirão Preto,Concluído,2020,PIVICT,NaN,Indisponível
+-47,Marina Caprio,"Vygotsky, a formação de conceitos científicos e o ensino de ciências da natureza",Concluído,2020,PIVICT,NaN,Indisponível
+-48,Marcos Alves Fontes,Comparação das propriedades mecânica e microestrutural de bielas de ferro sintetizado nitretadas e nitrocarbonetadas a plasma,Concluído,2019,PIBIFSP,NaN,Indisponível
+-49,Rubens Francisco Ventrici de Souza,Desenvolvimento de um secador assistido por aquecimento infravermelho para secagem de bagaço de cana-de-açúcar,Concluído,2019,PIBIFSP,NaN,Indisponível
+-50,Andreia Dias Ianuskiewtz,Gamificação como estratégia para revisão de conteúdo em aulas de língua inglesa,Concluído,2019,PIBIFSP,NaN,Indisponível
+-51,Cláudia Dias de Barros,Corpus de textos enganosos: construção e análise,Concluído,2019,PIBIFSP,NaN,Indisponível
+-52,Nemésio Freitas Duarte Filho,Desenvolvimento de um sistema de aprendizagem móvel interativo para o museu tecnológico do câmpus de Sertãozinho,Concluído,2019,PIBIFSP,NaN,Indisponível
+-53,Cláudia Dias de Barros,Folha internacional: anotação AMR em um corpus de notícias em inglês,Concluído,2019,PIBIFSP,NaN,Indisponível
+-54,Jean Carlos Rodrigues da Silva,"Reaproveitamento de resíduos da produção de cerveja para produção de enzimas industriais, bioetanol e outros produtos de maior valor agregado",Concluído,2019,PIBIFSP,NaN,Indisponível
+-55,Luiz Carlos Leal Junior,A constituição do pensamento matemático através da resolução de problemas como prática sociointeracionista no ensino superior,Concluído,2019,PIBIFSP,NaN,Indisponível
+-56,Maria Beatriz Gameiro Cordeiro,Estudo sociolinguístico sobre as variações na fala da terceira idade,Concluído,2019,PIBIFSP,NaN,Indisponível
+-57,Riama Coelho Gouveia,"Produção, caracterização estrutural e aplicação de nanopartículas metálicas em dispositivos",Concluído,2019,PIBIFSP,NaN,Indisponível
+-58,Francisco de Araújo Silva,"Compósitos de pentóxido de vanádio e N,N'-bis(4-carboximetil)-1,4,5,8-naftaleno diimida: produção e análise da eficiência em cátodos de bateria de íons lítio",Concluído,2019,PIBIFSP,NaN,Indisponível
+-59,Marcos Alves Fontes,Comparação das propriedades mecânica e tribológica dos ferros fundidos nodulares austemperados e nitretados,Concluído,2019,PIBIFSP,NaN,Indisponível
+-60,Marcos Alves Fontes,"Laminação a quente da liga de magnésio ZK60+2,5Mm processada por FSP",Concluído,2019,PIBIFSP,NaN,Indisponível
+-61,Riama Coelho Gouveia,Abordagem interdisciplinar dos semicondutores na Educação Profissional e Tecnológica: estudo comparativo,Concluído,2019,PIBIFSP,NaN,Indisponível
+-62,Cláudia Dias de Barros,Análise da estrutura argumental de verbos em um corpus jornalístico,Concluído,2019,PIBIFSP,NaN,Indisponível
+-63,Andre Luis Dias,Desenvolvimento de uma ferramenta baseada em Web para dimensionamento de equipamentos para acionamentos de motores elétricos,Concluído,2019,PIBIFSP,NaN,Indisponível
 -64,Marília Guimarães Pinheiro,Inteligência em negócio (BI) em recursos humanos: criação de visões com emprego de software de uso público,Concluído,2019,PIBIFSP,NaN,Indisponível
--65,Cláudia Dias de Barros,Corpus de textos enganosos: construção e análise,Concluído,2019,PIBIFSP,NaN,Indisponível
--66,Andreia Dias Ianuskiewtz,Ensino-aprendizagem de língua inglesa para surdos: uma análise socioeducacional,Concluído,2019,PIBIFSP,NaN,Indisponível
--67,Marcos Alves Fontes,"Laminação a quente da liga de magnésio ZK60+2,5Mm processada por FSP",Concluído,2019,PIBIFSP,NaN,Indisponível
--68,Cláudia Dias de Barros,Comparação da análise semântica AMR em um corpus paralelo de notícias,Concluído,2019,PIBIFSP,NaN,Indisponível
--69,Nemésio Freitas Duarte Filho,Criação de uma narrativa digital para apoiar o ensino da disciplina de eletrônica básica no curso de automação industrial,Concluído,2019,PIBIFSP,NaN,Indisponível
--70,Riama Coelho Gouveia,Automatização do sistema de posicionamento e movimentação de telescópio didático,Concluído,2019,PIBIFSP,NaN,Indisponível
--71,Patrícia Aparecida Pinheiro,Uma aplicação de equações diferenciais na Química,Concluído,2018,PIBIFSP,NaN,Indisponível
--72,Plínio Alexandre dos Santos Araújo,Responsabilidade social no setor comercial de Sertãozinho/SP: um estudo multicaso,Concluído,2018,PIBIFSP,NaN,Indisponível
--73,Paulo Sergio Calefi,Indicadores de interesse e motivação por temas químicos cotidianos: ferramenta para o direcionamento da contextualização no Ensino de Química,Concluído,2018,PIBIFSP,NaN,Indisponível
--74,Rubens Francisco Ventrici de Souza,Análise comparativa do teor de ácido ascórbico (vitamina C) contido em sucos de laranja industrializados,Concluído,2018,PIBIFSP,NaN,Indisponível
--75,Antonio Carlos de Souza,Concepção e desenvolvimento de célula de manufatura integrada em escala sob a ótica dos conceitos de manufatura enxuta e indústria 4.0,Concluído,2018,PIBIFSP,NaN,Indisponível
--76,Riama Coelho Gouveia,"Dispositivos de nanofios de gêrmanio dopados: síntese, fabricação e estudo das propriedades elétricas e opto-eletrônicas",Concluído,2018,PIBIFSP,NaN,Indisponível
--77,Rosycler Cristina Santos Simão,Evolução do perfil sócio-econômico das mulheres,Concluído,2018,PIBIFSP,NaN,Indisponível
--78,Andre Luis Dias,Automação do processo de inoculação em massa do parasitóide Cotesia flavipes,Concluído,2018,PIBIFSP,NaN,Indisponível
--79,Marcos Alves Fontes,Comparação das propriedades dos eixos fundidos nodular e cinzento austemperados,Concluído,2018,PIBIFSP,NaN,Indisponível
--80,Francisco de Araújo Silva,Compósitos à base de V2O5: produção e análise da eficiência em cátodos de bateria de íons lítio,Concluído,2018,PIBIFSP,NaN,Indisponível
--81,César Augusto de Jesus Falcão,Comparação das propriedades do desgaste abrasivo de um ferro fundido convencional com um ferro fundido austemperado - ADI,Concluído,2018,PIBIFSP,NaN,Indisponível
--82,Marília Guimarães Pinheiro,Práticas de combate a fraudes no sistema de cotas raciais para o ensino público: um estudo no IFSP,Concluído,2018,PIBIFSP,NaN,Indisponível
--83,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio: uma análise bibliográfica,Concluído,2018,PIBIFSP,NaN,Indisponível
--84,Olavo Henrique Menin,Febre amarela no Brasil : uma retrospectiva histórica e epidemiológica,Concluído,2018,PIBIFSP,NaN,Indisponível
--85,Marília Guimarães Pinheiro,Mulher negra e mercado de trabalho: a percepção da discriminação entre trabalhadoras de Sertãozinho-SP,Concluído,2018,PIBIFSP,NaN,Indisponível
--86,Marcos Alves Fontes,Controle de movimentação de um atuador pneumático através de um aparelho celular,Concluído,2018,PIBIFSP,NaN,Indisponível
--87,Daniel de Oliveira Bazoni,Análise da influência do raio da ponta da ferramenta no torneamento externo,Concluído,2018,PIBIFSP,NaN,Indisponível
--88,Marcos Alves Fontes,"Propriedades do ferro fundido cinzento, com e sem tratamento termoquímico de nitretação",Concluído,2018,PIBIFSP,NaN,Indisponível
--89,César Augusto de Jesus Falcão,Influência do tratamento térmico de austêmpera nas propriedades mecânicas de desgaste de um ferro fundido nodular,Concluído,2018,PIBIFSP,NaN,Indisponível
--90,Marília Guimarães Pinheiro,Terceirização das funções de recursos humanos nas empresas: um estudo em Sertãozinho/SP,Concluído,2018,PIBIFSP,NaN,Indisponível
--91,Riama Coelho Gouveia,A dança como mediadora do Ensino-Aprendizagem,Concluído,2018,PIBIFSP,NaN,Indisponível
--92,Alexandre Montagna Rossini,Aprendizagem: efeitos para os aprendizes da região de Ribeirão Preto,Concluído,2018,PIBIFSP,NaN,Indisponível
--93,Riama Coelho Gouveia,"""Semicondutores"" como tema interdisciplinar em atividades didático-pedagógicas na Educação Profissional e Tecnológica",Concluído,2018,PIBIFSP,NaN,Indisponível
--94,Andre Luis Dias,Método para Extração de Características em redes PROFINET Aplicadas a Acionamentos de Motores Elétricos,Concluído,2018,PIBIFSP,NaN,Indisponível
--95,Olavo Henrique Menin,Estudo numérico de modelos epidêmicos comportamentais,Concluído,2018,PIBIFSP,NaN,Indisponível
--96,Antonio Carlos de Souza,Análise aerodinâmica de uma asa finita utilizando elementos finitos,Concluído,2018,PIBIFSP,NaN,Indisponível
--97,Riama Coelho Gouveia,"Sintese, caracterização estrutural e propriedades elétricas de nanofios semicondutores de óxidos metálicos",Concluído,2018,PIBIFSP,NaN,Indisponível
--98,Nemésio Freitas Duarte Filho,Estabelecimento de um Catálogo de Requisitos para Sistemas Ciber-Físicos no Contexto da Indústria 4.0,Concluído,2018,PIBIFSP,NaN,Indisponível
--99,Andre Luis Dias,Método para automação do processo de inoculação de Cotésia flavipes,Concluído,2018,PIBIFSP,NaN,Indisponível
--100,Marina Caprio,Mapeamento dos egressos das licenciaturas em Química do IFSP: um estudo sobre o início da profissionalização de professores.,Concluído,2018,PIBIFSP,NaN,Indisponível
--101,Maria Beatriz Gameiro Cordeiro,Pichachões: análise sociodiscursiva e construção de um corpus,Concluído,2018,PIBIFSP,NaN,Indisponível
--102,Gisele Baraldi Messiano,Estudo fitoquímico de Mentha suaveolens var. variegata (hortelã maçã),Concluído,2018,PIBIFSP,NaN,Indisponível
--103,Afonso Celso Turcato,Votoino - Sistema Eletrônico de Respostas,Concluído,2018,PIBIFSP,NaN,Indisponível
--104,Maria Beatriz Gameiro Cordeiro,"Estudo quali-quantitativo do gênero ""meme"" e sua contribuição para o ensino",Concluído,2018,PIBIFSP,NaN,Indisponível
--105,Antonio Carlos de Souza,Gerência do projeto AEROSERT 2018,Concluído,2018,PIBIFSP,NaN,Indisponível
--106,Juliana Cristina Perlotti Piunti,Avaliação da aprendizagem na perspectiva de estudantes da educação profissional e técnica de nível médio,Concluído,2018,PIBIFSP,NaN,Indisponível
--107,Nemésio Freitas Duarte Filho,Estabelecimento de um sistema de aprendizagem móvel com foco nos conceitos da indústria 4.0,Concluído,2017,PIBIFSP,NaN,Indisponível
--108,Riama Coelho Gouveia,Abordagem do tema “SEMICONDUTORES” na formação de professores das ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
--109,Estela de Sousa Rossetto,Flores do Campus – Calendário Floral e Síndromes de Polinização,Concluído,2017,PIBIFSP,NaN,Indisponível
--110,Estela de Sousa Rossetto,Aves do Campus Sertãozinho do IFSP,Concluído,2017,PIBIFSP,NaN,Indisponível
--111,Juliana Cristina Perlotti Piunti,Práticas avaliativas na educação profissional e técnica de nível médio,Concluído,2017,PIBIFSP,NaN,Indisponível
--112,Antônio Carlos de Souza,"Desenvolvimento, projeto e confecção de dispositivo de filtragem para sistema de medição de níveis por borbulhamento",Concluído,2017,PIBIFSP,NaN,Indisponível
--113,Paulo Sérgio Calefi,Problematização de temas contextualizados para o ensino de química,Concluído,2017,PIBIFSP,NaN,Indisponível
--114,Maria Beatriz Gameiro Cordeiro,Análise do grau de compreensão sobre gêneros do discurso por estudantes de Letras do IFSP – Câmpus Sertãozinho,Concluído,2017,PIBIFSP,NaN,Indisponível
--115,Rosycler Cristina Santos Simão,Um estudo do perfil da liderança feminina em Ribeirão Preto de acordo com o Censo Demográfico de 2,Concluído,2017,PIBIFSP,NaN,Indisponível
--116,Riama Coelho Gouveia,Estudo comparativo de propriedades eletrônicas de dispositivos de rede de nanofios de germânio com diferentes configurações,Concluído,2017,PIBIFSP,NaN,Indisponível
--117,Paulo Donato Frighetto,Projeto e construção de um sistema de transmissão,Concluído,2017,PIBIFSP,NaN,Indisponível
--118,Paulo Donato Frighetto,Projeto e construção de um sistema de suspensão,Concluído,2017,PIBIFSP,NaN,Indisponível
--119,Gisele Baraldi Messiano,Estudo fitoquímico de Achyrocline satureoides,Concluído,2017,PIBIFSP,NaN,Indisponível
--120,Rodrigo Palucci Pantoni,Vaso Inteligente Automatizado,Concluído,2017,PIBIFSP,NaN,Indisponível
--121,Fernado Silva Teruel,Eletrogeração de produtos de alto valor agregado a partir da oxidação do glicerol utilizando a base de platina como ânodo,Concluído,2017,PIBIFSP,NaN,Indisponível
--122,Riama Coelho Gouveia,Semicondutores e meio ambiente: proposta didático-pedagógico para formação de professores de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
--123,Maria José dos Santos,Identificação da concepção de natureza em livros didáticos para ensino de química,Concluído,2017,PIBIFSP,NaN,Indisponível
--124,Riama Coelho Gouveia,Tecnologia e ciência: os semicondutores nos livros didáticos da área de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
--125,Nemésio Freitas Duarte Filho,Análise comparativa documental entre diferentes sistemas de desenvolvimento híbrido móvel,Concluído,2017,PIBIFSP,NaN,Indisponível
--126,Riama Coelho Gouveia,Conteúdos relacionados aos semicondutores em cursos de licenciatura na área de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
--127,Rubens Francisco Ventrici de Souza,Determinação da capacidade antioxidante in vitro de polpas de frutos tropicais,Concluído,2017,PIBIFSP,NaN,Indisponível
--128,Afonso Celso Turcato,Software para operação assistida de teares de Pente-Liço,Concluído,2017,PIBIFSP,NaN,Indisponível
--129,Rubens Francisco Ventrici de Souza,Comparação do teor de fenólicos totais e da atividade antioxidande de vinhos tintos e brancos,Concluído,2017,PIBIFSP,NaN,Indisponível
--130,Antonio Luis Zorzetto,Dificuldades das empresas do município de Ribeirão Preto - SP e região para inclusão de pessoas com deficiência visual de grau severo,Concluído,2017,PIBIFSP,NaN,Indisponível
--131,Paulo Donato Frighetto,Projeto e construção de um sistema de transmissão,Concluído,2016,PIBIFSP,NaN,Indisponível
--132,Rubens Francisco Ventrici de Souza,"Síntese, caracterização e estudo das propriedades antioxidantes de complexos contendo flavonóides e íons metálicos",Concluído,2016,PIBIFSP,NaN,Indisponível
--133,Amanda Ribeiro Vieira,"Análise dos programas de formação docente desenvolvidos por universidades públicas
-  paulistas: um estudo multicaso",Concluído,2016,PIBIFSP,NaN,Indisponível
--134,Maria Beatriz Gameiro Cordeiro,A língua portuguesa nos livros didáticos e em avaliações externas,Concluído,2016,PIBIFSP,NaN,Indisponível
--135,Gisele Baraldi Messiano,Estudo fitoquímico de Plantago major (tanchagem),Concluído,2016,PIBIFSP,NaN,Indisponível
--136,Viviane Cristina Garcia de Stefani,Construção de vocabulário para entrevistas de emprego a partir do cinema,Concluído,2016,PIBIFSP,NaN,Indisponível
--137,Rosycler Cristina Santos Simão,Um estudo da Cultura e do Clima Organizacional do IFSP –CÂMPUS SERTÃOZINHO,Concluído,2016,PIBIFSP,NaN,Indisponível
--138,Estela de Sousa Rossetto,Manufatura de crachás de papel semente usando descarte de papel de escritório do Campus e corantes naturais.,Concluído,2016,PIBIFSP,NaN,Indisponível
--139,Paulo Donato Frighetto,Projeto e construção de um sistema de suspensão,Concluído,2016,PIBIFSP,NaN,Indisponível
--140,Estela de Sousa Rossetto,Botânica no Campus – criação de uma trilha paradidática,Concluído,2016,PIBIFSP,NaN,Indisponível
--141,Rodrigo Palucci Pantoni,Veículo não tripulado comandado por dispositivo móvel,Concluído,2016,PIBIFSP,NaN,Indisponível
--142,Lucimar Falcão,A Metodologia dos 3 Momentos Pedagógicos como Ferramenta Complementar ao Ensino e à Aprendizagem de Química Geral.,Concluído,2016,PIBIFSP,NaN,Indisponível
--143,Gisele Baraldi Messiano,Estudo fitoquímico de Mentha piperita (hortelã),Concluído,2016,PIBIFSP,NaN,Indisponível
--144,Luiz Ricardo,Uma abordagem aplicada ao ensino de Gestão de Recursos Humanos utilizando um Sistema Integrado de Gestão (ERP),Concluído,2016,PIBIFSP,NaN,Indisponível
--145,Paulo Donato Frighetto,Resistência ao impacto de aços médio carbono-baixa liga,Concluído,2016,PIBIFSP,NaN,Indisponível
--146,Rubens Francisco Ventrici de Souza,"Síntese, caracterização e estudo das propriedades antioxidantes de complexos contendo quercetina e íons chumbo",Concluído,2016,PIBIFSP,NaN,Indisponível
--147,Paulo Sérgio Adami,Significando funções exponenciais com experimentos químicos,Concluído,2016,PIBIFSP,NaN,Indisponível
--148,Rodrigo Palucci Pantoni,Vaso inteligente automatizado,Concluído,2016,PIBIFSP,NaN,Indisponível
--149,Rodrigo Palucci Pantoni,Fabricação e montagem do pré-protótipo para testes experimentais,Concluído,2016,PIBIFSP,NaN,Indisponível
--150,Amanda Ribeiro Vieira,As contribuições da empresa júnior para o desenvolvimento das competências profissionais do estudante universitário,Concluído,2015,PIBIFSP,NaN,Indisponível
--151,Amanda Ribeiro Vieira,Estudo da viabilidade da implantação de uma empresa júnior no campus Sertãozinho do IFSP,Concluído,2015,PIBIFSP,NaN,Indisponível
--152,Rodrigo Palucci Pantoni,Controle remoro via voz de veículo,Concluído,2015,PIBIFSP,NaN,Indisponível
--153,Rubens Francisco Ventrici de Souza,Análise do comportamento elétrico de contatos metal/semicondutor em nanofios de germânio submetidos a tratamento térmico em diferentes temperaturas,Concluído,2015,PIBIFSP,NaN,Indisponível
--154,Antônio Carlos de Souza,Desenvolvimento de dispositivo para alojamento da Bília,Concluído,2015,PIBIFSP,NaN,Indisponível
--155,Luis Ricardo Figueiredo,"Estudos, projetos e dissertações em sistemas de informação e gestão",Concluído,2015,PIBIFSP,NaN,Indisponível
--156,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - software,Concluído,2015,PIBIFSP,NaN,Indisponível
--157,Eduardo André Mossin,Desenvolvimento de um computador de bordo para volante automobilístico,Concluído,2015,PIBIFSP,NaN,Indisponível
--158,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
--159,Reinaldo Golmia Dante,Desenvolvimento de uma plataforma web de educação para o xadrez,Concluído,2015,PIBIFSP,NaN,Indisponível
--160,Rodrigo Palucci Pantoni,Transmissor de temperatura ambiente para dispositivo móvel sem fio,Concluído,2015,PIBIFSP,NaN,Indisponível
--161,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
--162,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas ruderais encontradas em áreas públicas de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
--163,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas no comércio de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
--164,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas em quintais de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
--165,Eduardo André Mossin,Contexto e aplicação de virtualização na indústria.,Concluído,2015,PIBIFSP,NaN,Indisponível
--166,Paula Garcia da Costa Petean,Estudo dos métodos fisico-químicos aplicados ao controle de qualidade do leite e derivados,Concluído,2015,PIBIFSP,NaN,Indisponível
--167,Paula Garcia da Costa Petean,Determinação da cinética de degradação da vitamina C em sucos de fruta pasteurizados,Concluído,2015,PIBIFSP,NaN,Indisponível
--168,Fabiana Alexandre Ferreira,Ferramentas para gestão de pessoas: análise da estrutura de uma instituição hospitalar de Ribeirão Preto,Concluído,2015,PIBIFSP,NaN,Indisponível
--169,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
--170,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - hardware,Concluído,2014,PIBIFSP,NaN,Indisponível
--171,Eduardo André Mossin,Estudo de sistemas gerenciadores de conteúdo web e implementação de protótipo de um site para cadastro de pesquisas,Concluído,2012,PIBIFSP,NaN,Indisponível
--172,Rubens Francisco Ventrici de Souza,A importancia das aulas experimentais no ensino de química para o ensino médio,Concluído,2012,PIBIFSP,NaN,Indisponível
--173,José Carlos de Souza Kiihl,Modelos estatísticos aplicados,Concluído,2012,PIBIFSP,NaN,Indisponível
--174,Eduardo André Mossin,Estudo e Criação de um website para gerenciamento de projetos científicos,Concluído,2012,PIBIFSP,NaN,Indisponível
--175,Luiz Carlos Leal Júnior,Um estudo sobre designs esféricos,Concluído,2012,PIBIFSP,NaN,Indisponível
--176,Bruno Gonzaga Teodoro,Determinação e prevalência do índice de adiposidade cental(IAC) dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIFSP,NaN,Indisponível
--177,Bruno Gonzaga Teodoro,Identificação do risco cardiovascular dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIFSP,NaN,Indisponível
--178,Antônio Carlos de Souza,Estudo e aplicação dos conceitos de aerodinâmica em uma aeronave em escala rádio controlada,Concluído,2012,PIBIFSP,NaN,Indisponível
--179,Antônio Carlos de Souza,Análise de desempenho de uma aeronave em escala rádio controlada,Concluído,2011,PIBIFSP,NaN,Indisponível
--180,Reinaldo Golmia Dante,Matemática Para GPS,Concluído,2011,PIBIFSP,NaN,Indisponível
--181,Antônio Carlos de Souza,Aplicação de ferramentas de melhorias de processos em ambientes de manufatura enxuta,Concluído,2011,PIBIFSP,NaN,Indisponível
--182,Amanda Ribeiro Vieira,Competências essenciais dos professores da área de gestão: uma análise a partir da perspectiva dos alunos,Concluído,2011,PIBIFSP,NaN,Indisponível
--183,Eduardo André Mossin,"Propor e aplicar um modelo de gestão para equipe e concepção, desenvolvimento e construçao de aeronave em escala rádio controlada",Concluído,2011,PIBIFSP,NaN,Indisponível
--184,João Paulo Colafemina,Projeto de manufatura de lentes Fresnel desenvolvido nos softwares VBA para AutoCad e Inventor,Concluído,2010,PIBIFSP,NaN,Indisponível
--185,Marília Guimarães Pinheiro,Um estudo sobre necessidades de ensaios mecânicos e tecnológicos da região de Sertãozinho-SP,Concluído,2009,PIBIFSP,NaN,Indisponível
--186,Antônio Carlos de Souza,Elaboração de procedimentos de ensaios mecânicos para atender a pesquisas tecnológicas em processos de usinagem,Concluído,2009,PIBIFSP,NaN,Indisponível
+-65,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio,Concluído,2019,PIBIFSP,NaN,Indisponível
+-66,Jefferson Ferreira do Nascimento,Estereótipos e estigmatização: uma análise sobre a prática do futebol feminino no município de Sertãozinho-SP,Concluído,2019,PIBIFSP,NaN,Indisponível
+-67,Patrícia Aparecida Pinheiro,Elaboração de material didático auxiliar de Cálculo I,Concluído,2019,PIBIFSP,NaN,Indisponível
+-68,Andreia Dias Ianuskiewtz,Ensino-aprendizagem de língua inglesa para surdos: uma análise socioeducacional,Concluído,2019,PIBIFSP,NaN,Indisponível
+-69,Cláudia Dias de Barros,Comparação da análise semântica AMR em um corpus paralelo de notícias,Concluído,2019,PIBIFSP,NaN,Indisponível
+-70,Giovana Siqueira Príncipe,A cartilha do participante para redação do Enem (2018) como agente de letramento e suas dimensões escondidas,Concluído,2019,PIBIFSP,NaN,Indisponível
+-71,Nemésio Freitas Duarte Filho,Criação de uma narrativa digital para apoiar o ensino da disciplina de eletrônica básica no curso de automação industrial,Concluído,2019,PIBIFSP,NaN,Indisponível
+-72,Riama Coelho Gouveia,Automatização do sistema de posicionamento e movimentação de telescópio didático,Concluído,2019,PIBIFSP,NaN,Indisponível
+-73,Andreia Dias Ianuskiewtz,Educação bilíngue: um estudo sobre suas metodologias e potencialidades,Concluído,2019,PIBIFSP,NaN,Indisponível
+-74,Pio Antonio de Figueiredo,Projeto microgeração energia solar compartilhada CPFL-IFSP Sertãozinho - Parte I - Smart Grid,Concluído,2019,PIBIFSP,NaN,Indisponível
+-75,Elizabeth da Silva Macena,Letramento literário do licenciado em letras: uma proposta a partir da leitura de 1984 de George Orwell,Concluído,2019,PIBIFSP,NaN,Indisponível
+-76,Andre Luis Dias,Proposta de um sistema de alimentação de brocas de Diatraeae saccharalis para o processo de inoculação de vespas Cotesia flavipes,Concluído,2019,PIBIFSP,NaN,Indisponível
+-77,Plínio Alexandre dos Santos Caetano,O projeto integrador do curso técnico em administração do Câmpus Sertãozinho do IFSP na perspectiva dos egressos do curso,Concluído,2019,PIBIFSP,NaN,Indisponível
+-78,Estela de Sousa Rossetto,Olha o passarinho? Exercício de atenção e memória em um jogo paradidático sobre aves,Concluído,2019,PIBIFSP,NaN,Indisponível
+-79,Riama Coelho Gouveia,Desenvolvimento de sistema de medidas elétricas e optoeletrônicas para dispositivos nanotecnológicos,Concluído,2019,PIBIFSP,NaN,Indisponível
+-80,Afonso Celso Turcato,Aperfeiçoamento do sistema eletrônico de respostas denominado Votoino,Concluído,2019,PIBIFSP,NaN,Indisponível
+-81,Marina Caprio,A formação de professores a partir da Base Nacional Comum Curricular (BNCC): análise do impacto na formação inicial.,Concluído,2019,PIBIFSP,NaN,Indisponível
+-82,Marília Guimarães Pinheiro,Inteligência em negócio (BI) em recursos humanos: criação de visões com emprego de software de uso público,Concluído,2019,PIVICT,NaN,Indisponível
+-83,Cláudia Dias de Barros,Análise da estrutura argumental de verbos em um corpus jornalístico,Concluído,2019,PIVICT,NaN,Indisponível
+-84,Cláudia Dias de Barros,Corpus de textos enganosos: construção e análise,Concluído,2019,PIVICT,NaN,Indisponível
+-85,Marcos Alves Fontes,Comparação das propriedades mecânica e tribológica dos ferros fundidos nodulares austemperados e nitretados,Concluído,2019,PIVICT,NaN,Indisponível
+-86,Riama Coelho Gouveia,Abordagem interdisciplinar dos semicondutores na Educação Profissional e Tecnológica: estudo comparativo,Concluído,2019,PIVICT,NaN,Indisponível
+-87,Riama Coelho Gouveia,Desenvolvimento de sistema de medidas elétricas e optoeletrônicas para dispositivos nanotecnológicos,Concluído,2019,PIVICT,NaN,Indisponível
+-88,Andre Luis Dias,Desenvolvimento de uma ferramenta baseada em Web para dimensionamento de equipamentos para acionamentos de motores elétricos,Concluído,2019,PIVICT,NaN,Indisponível
+-89,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio,Concluído,2019,PIVICT,NaN,Indisponível
+-90,Jefferson Ferreira do Nascimento,Estereótipos e estigmatização: uma análise sobre a prática do futebol feminino no município de Sertãozinho-SP,Concluído,2019,PIVICT,NaN,Indisponível
+-91,Patrícia Aparecida Pinheiro,Elaboração de material didático auxiliar de Cálculo I,Concluído,2019,PIVICT,NaN,Indisponível
+-92,Andreia Dias Ianuskiewtz,Ensino-aprendizagem de língua inglesa para surdos: uma análise socioeducacional,Concluído,2019,PIVICT,NaN,Indisponível
+-93,Marília Guimarães Pinheiro,Terceirização das funções de recursos humanos nas empresas: um estudo em Sertãozinho/SP,Concluído,2018,PIVICT,NaN,Indisponível
+-94,Rosycler Cristina Santos Simão,Evolução do perfil sócio-econômico das mulheres,Concluído,2018,PIBIC-AF,NaN,Indisponível
+-95,Antonio Carlos de Souza,Concepção e desenvolvimento de célula de manufatura integrada em escala sob a ótica dos conceitos de manufatura enxuta e indústria 4.0,Concluído,2018,PIBITI,NaN,Indisponível
+-96,Riama Coelho Gouveia,"Dispositivos de nanofios de gêrmanio dopados: síntese, fabricação e estudo das propriedades elétricas e opto-eletrônicas",Concluído,2018,PIBITI,NaN,Indisponível
+-97,Paulo Sergio Calefi,Indicadores de interesse e motivação por temas químicos cotidianos: ferramenta para o direcionamento da contextualização no Ensino de Química,Concluído,2018,FAPESP,NaN,Indisponível
+-98,Marília Guimarães Pinheiro,Terceirização das funções de recursos humanos nas empresas: um estudo em Sertãozinho/SP,Concluído,2018,PIBIFSP,NaN,Indisponível
+-99,Riama Coelho Gouveia,"""Semicondutores"" como tema interdisciplinar em atividades didático-pedagógicas na Educação Profissional e Tecnológica",Concluído,2018,PIVICT,NaN,Indisponível
+-100,Plínio Alexandre dos Santos Araújo,Responsabilidade social no setor comercial de Sertãozinho/SP: um estudo multicaso,Concluído,2018,PIVICT,NaN,Indisponível
+-101,Riama Coelho Gouveia,A dança como mediadora do Ensino-Aprendizagem,Concluído,2018,PIVICT,NaN,Indisponível
+-102,Alexandre Montagna Rossini,Aprendizagem: efeitos para os aprendizes da região de Ribeirão Preto,Concluído,2018,PIVICT,NaN,Indisponível
+-103,Patrícia Aparecida Pinheiro,Uma aplicação de equações diferenciais na Química,Concluído,2018,PIVICT,NaN,Indisponível
+-104,Rubens Francisco Ventrici de Souza,Análise comparativa do teor de ácido ascórbico (vitamina C) contido em sucos de laranja industrializados,Concluído,2018,PIVICT,NaN,Indisponível
+-105,Marcos Alves Fontes,Comparação das propriedades dos eixos fundidos nodular e cinzento austemperados,Concluído,2018,PIVICT,NaN,Indisponível
+-106,Francisco de Araújo Silva,Compósitos à base de V2O5: produção e análise da eficiência em cátodos de bateria de íons lítio,Concluído,2018,PIVICT,NaN,Indisponível
+-107,Marília Guimarães Pinheiro,Práticas de combate a fraudes no sistema de cotas raciais para o ensino público: um estudo no IFSP,Concluído,2018,PIVICT,NaN,Indisponível
+-108,César Augusto de Jesus Falcão,Comparação das propriedades do desgaste abrasivo de um ferro fundido convencional com um ferro fundido austemperado - ADI,Concluído,2018,PIVICT,NaN,Indisponível
+-109,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio: uma análise bibliográfica,Concluído,2018,PIVICT,NaN,Indisponível
+-110,Olavo Henrique Menin,Febre amarela no Brasil : uma retrospectiva histórica e epidemiológica,Concluído,2018,PIVICT,NaN,Indisponível
+-111,Marília Guimarães Pinheiro,Mulher negra e mercado de trabalho: a percepção da discriminação entre trabalhadoras de Sertãozinho-SP,Concluído,2018,PIVICT,NaN,Indisponível
+-112,Marcos Alves Fontes,Controle de movimentação de um atuador pneumático através de um aparelho celular,Concluído,2018,PIVICT,NaN,Indisponível
+-113,Daniel de Oliveira Bazoni,Análise da influência do raio da ponta da ferramenta no torneamento externo,Concluído,2018,PIVICT,NaN,Indisponível
+-114,Marcos Alves Fontes,"Propriedades do ferro fundido cinzento, com e sem tratamento termoquímico de nitretação",Concluído,2018,PIVICT,NaN,Indisponível
+-115,César Augusto de Jesus Falcão,Influência do tratamento térmico de austêmpera nas propriedades mecânicas de desgaste de um ferro fundido nodular,Concluído,2018,PIVICT,NaN,Indisponível
+-116,Andre Luis Dias,Automação do processo de inoculação em massa do parasitóide Cotesia flavipes,Concluído,2018,FAPESP,NaN,Indisponível
+-117,César Augusto de Jesus Falcão,Influência do tratamento térmico de austêmpera nas propriedades mecânicas de desgaste de um ferro fundido nodular,Concluído,2018,PIBIFSP,NaN,Indisponível
+-118,Patrícia Aparecida Pinheiro,Uma aplicação de equações diferenciais na Química,Concluído,2018,PIBIFSP,NaN,Indisponível
+-119,Riama Coelho Gouveia,A dança como mediadora do Ensino-Aprendizagem,Concluído,2018,PIBIFSP,NaN,Indisponível
+-120,Riama Coelho Gouveia,"""Semicondutores"" como tema interdisciplinar em atividades didático-pedagógicas na Educação Profissional e Tecnológica",Concluído,2018,PIBIFSP,NaN,Indisponível
+-121,Andre Luis Dias,Método para Extração de Características em redes PROFINET Aplicadas a Acionamentos de Motores Elétricos,Concluído,2018,PIBIFSP,NaN,Indisponível
+-122,Antonio Carlos de Souza,Gerência do projeto AEROSERT 2018,Concluído,2018,PIBIFSP,NaN,Indisponível
+-123,Afonso Celso Turcato,Votoino - Sistema Eletrônico de Respostas,Concluído,2018,PIBIFSP,NaN,Indisponível
+-124,Juliana Cristina Perlotti Piunti,Avaliação da aprendizagem na perspectiva de estudantes da educação profissional e técnica de nível médio,Concluído,2018,PIBIFSP,NaN,Indisponível
+-125,Gisele Baraldi Messiano,Estudo fitoquímico de Mentha suaveolens var. variegata (hortelã maçã),Concluído,2018,PIBIFSP,NaN,Indisponível
+-126,Olavo Henrique Menin,Estudo numérico de modelos epidêmicos comportamentais,Concluído,2018,PIBIFSP,NaN,Indisponível
+-127,Marina Caprio,Mapeamento dos egressos das licenciaturas em Química do IFSP: um estudo sobre o início da profissionalização de professores.,Concluído,2018,PIBIFSP,NaN,Indisponível
+-128,Andre Luis Dias,Método para automação do processo de inoculação de Cotésia flavipes,Concluído,2018,PIBIFSP,NaN,Indisponível
+-129,Nemésio Freitas Duarte Filho,Estabelecimento de um Catálogo de Requisitos para Sistemas Ciber-Físicos no Contexto da Indústria 4.0,Concluído,2018,PIBIFSP,NaN,Indisponível
+-130,Riama Coelho Gouveia,"Sintese, caracterização estrutural e propriedades elétricas de nanofios semicondutores de óxidos metálicos",Concluído,2018,PIBIFSP,NaN,Indisponível
+-131,Maria Beatriz Gameiro Cordeiro,Pichachões: análise sociodiscursiva e construção de um corpus,Concluído,2018,PIBIFSP,NaN,Indisponível
+-132,Antonio Carlos de Souza,Análise aerodinâmica de uma asa finita utilizando elementos finitos,Concluído,2018,PIBIFSP,NaN,Indisponível
+-133,César Augusto de Jesus Falcão,Comparação das propriedades do desgaste abrasivo de um ferro fundido convencional com um ferro fundido austemperado - ADI,Concluído,2018,PIBIFSP,NaN,Indisponível
+-134,Alexandre Montagna Rossini,Aprendizagem: efeitos para os aprendizes da região de Ribeirão Preto,Concluído,2018,PIBIFSP,NaN,Indisponível
+-135,Maria Beatriz Gameiro Cordeiro,"Estudo quali-quantitativo do gênero ""meme"" e sua contribuição para o ensino",Concluído,2018,PIBIFSP,NaN,Indisponível
+-136,Paulo Sergio Calefi,Indicadores de interesse e motivação por temas químicos cotidianos: ferramenta para o direcionamento da contextualização no Ensino de Química,Concluído,2018,PIBIFSP,NaN,Indisponível
+-137,Plínio Alexandre dos Santos Araújo,Responsabilidade social no setor comercial de Sertãozinho/SP: um estudo multicaso,Concluído,2018,PIBIFSP,NaN,Indisponível
+-138,Marcos Alves Fontes,"Propriedades do ferro fundido cinzento, com e sem tratamento termoquímico de nitretação",Concluído,2018,PIBIFSP,NaN,Indisponível
+-139,Daniel de Oliveira Bazoni,Análise da influência do raio da ponta da ferramenta no torneamento externo,Concluído,2018,PIBIFSP,NaN,Indisponível
+-140,Rubens Francisco Ventrici de Souza,Análise comparativa do teor de ácido ascórbico (vitamina C) contido em sucos de laranja industrializados,Concluído,2018,PIBIFSP,NaN,Indisponível
+-141,Marília Guimarães Pinheiro,Mulher negra e mercado de trabalho: a percepção da discriminação entre trabalhadoras de Sertãozinho-SP,Concluído,2018,PIBIFSP,NaN,Indisponível
+-142,Olavo Henrique Menin,Febre amarela no Brasil : uma retrospectiva histórica e epidemiológica,Concluído,2018,PIBIFSP,NaN,Indisponível
+-143,Olavo Henrique Menin,O tema doenças infecciosas no ensino médio: uma análise bibliográfica,Concluído,2018,PIBIFSP,NaN,Indisponível
+-144,Marília Guimarães Pinheiro,Práticas de combate a fraudes no sistema de cotas raciais para o ensino público: um estudo no IFSP,Concluído,2018,PIBIFSP,NaN,Indisponível
+-145,Marcos Alves Fontes,Controle de movimentação de um atuador pneumático através de um aparelho celular,Concluído,2018,PIBIFSP,NaN,Indisponível
+-146,Francisco de Araújo Silva,Compósitos à base de V2O5: produção e análise da eficiência em cátodos de bateria de íons lítio,Concluído,2018,PIBIFSP,NaN,Indisponível
+-147,Andre Luis Dias,Automação do processo de inoculação em massa do parasitóide Cotesia flavipes,Concluído,2018,PIBIFSP,NaN,Indisponível
+-148,Rosycler Cristina Santos Simão,Evolução do perfil sócio-econômico das mulheres,Concluído,2018,PIBIFSP,NaN,Indisponível
+-149,Riama Coelho Gouveia,"Dispositivos de nanofios de gêrmanio dopados: síntese, fabricação e estudo das propriedades elétricas e opto-eletrônicas",Concluído,2018,PIBIFSP,NaN,Indisponível
+-150,Antonio Carlos de Souza,Concepção e desenvolvimento de célula de manufatura integrada em escala sob a ótica dos conceitos de manufatura enxuta e indústria 4.0,Concluído,2018,PIBIFSP,NaN,Indisponível
+-151,Marcos Alves Fontes,Comparação das propriedades dos eixos fundidos nodular e cinzento austemperados,Concluído,2018,PIBIFSP,NaN,Indisponível
+-152,Rosycler Cristina Santos Simão,Um estudo do perfil da liderança feminina em Ribeirão Preto de acordo com o Censo Demográfico de 2,Concluído,2017,PIBIFSP,NaN,Indisponível
+-153,Estela de Sousa Rossetto,Aves do Campus Sertãozinho do IFSP,Concluído,2017,PIBIFSP,NaN,Indisponível
+-154,Juliana Cristina Perlotti Piunti,Práticas avaliativas na educação profissional e técnica de nível médio,Concluído,2017,PIBIFSP,NaN,Indisponível
+-155,Nemésio Freitas Duarte Filho,Estabelecimento de um sistema de aprendizagem móvel com foco nos conceitos da indústria 4.0,Concluído,2017,PIBIFSP,NaN,Indisponível
+-156,Paulo Sérgio Calefi,Problematização de temas contextualizados para o ensino de química,Concluído,2017,PIBIFSP,NaN,Indisponível
+-157,Maria Beatriz Gameiro Cordeiro,Análise do grau de compreensão sobre gêneros do discurso por estudantes de Letras do IFSP – Câmpus Sertãozinho,Concluído,2017,PIBIFSP,NaN,Indisponível
+-158,Antônio Carlos de Souza,"Desenvolvimento, projeto e confecção de dispositivo de filtragem para sistema de medição de níveis por borbulhamento",Concluído,2017,PIBIFSP,NaN,Indisponível
+-159,Riama Coelho Gouveia,Conteúdos relacionados aos semicondutores em cursos de licenciatura na área de ciências da natureza,Concluído,2017,PIVICT,NaN,Indisponível
+-160,Riama Coelho Gouveia,Estudo comparativo de propriedades eletrônicas de dispositivos de rede de nanofios de germânio com diferentes configurações,Concluído,2017,PIBIFSP,NaN,Indisponível
+-161,Riama Coelho Gouveia,Semicondutores e meio ambiente: proposta didático-pedagógico para formação de professores de ciências da natureza,Concluído,2017,PIVICT,NaN,Indisponível
+-162,Riama Coelho Gouveia,Tecnologia e ciência: os semicondutores nos livros didáticos da área de ciências da natureza,Concluído,2017,PIVICT,NaN,Indisponível
+-163,Nemésio Freitas Duarte Filho,Análise comparativa documental entre diferentes sistemas de desenvolvimento híbrido móvel,Concluído,2017,PIVICT,NaN,Indisponível
+-164,Fernado Silva Teruel,Eletrogeração de produtos de alto valor agregado a partir da oxidação do glicerol utilizando a base de platina como ânodo,Concluído,2017,PIVICT,NaN,Indisponível
+-165,Riama Coelho Gouveia,Abordagem do tema “SEMICONDUTORES” na formação de professores das ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
+-166,Estela de Sousa Rossetto,Flores do Campus – Calendário Floral e Síndromes de Polinização,Concluído,2017,PIBIFSP,NaN,Indisponível
+-167,Riama Coelho Gouveia,Tecnologia e ciência: os semicondutores nos livros didáticos da área de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
+-168,Paulo Donato Frighetto,Projeto e construção de um sistema de suspensão,Concluído,2017,PIBIFSP,NaN,Indisponível
+-169,Fernado Silva Teruel,Eletrogeração de produtos de alto valor agregado a partir da oxidação do glicerol utilizando a base de platina como ânodo,Concluído,2017,PIBIFSP,NaN,Indisponível
+-170,Rodrigo Palucci Pantoni,Vaso Inteligente Automatizado,Concluído,2017,PIBIFSP,NaN,Indisponível
+-171,Maria José dos Santos,Identificação da concepção de natureza em livros didáticos para ensino de química,Concluído,2017,PIBIFSP,NaN,Indisponível
+-172,Gisele Baraldi Messiano,Estudo fitoquímico de Achyrocline satureoides,Concluído,2017,PIBIFSP,NaN,Indisponível
+-173,Antonio Luis Zorzetto,Dificuldades das empresas do município de Ribeirão Preto - SP e região para inclusão de pessoas com deficiência visual de grau severo,Concluído,2017,PIBIFSP,NaN,Indisponível
+-174,Rubens Francisco Ventrici de Souza,Comparação do teor de fenólicos totais e da atividade antioxidande de vinhos tintos e brancos,Concluído,2017,PIBIFSP,NaN,Indisponível
+-175,Afonso Celso Turcato,Software para operação assistida de teares de Pente-Liço,Concluído,2017,PIBIFSP,NaN,Indisponível
+-176,Rubens Francisco Ventrici de Souza,Determinação da capacidade antioxidante in vitro de polpas de frutos tropicais,Concluído,2017,PIBIFSP,NaN,Indisponível
+-177,Riama Coelho Gouveia,Semicondutores e meio ambiente: proposta didático-pedagógico para formação de professores de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
+-178,Paulo Donato Frighetto,Projeto e construção de um sistema de transmissão,Concluído,2017,PIBIFSP,NaN,Indisponível
+-179,Riama Coelho Gouveia,Conteúdos relacionados aos semicondutores em cursos de licenciatura na área de ciências da natureza,Concluído,2017,PIBIFSP,NaN,Indisponível
+-180,Nemésio Freitas Duarte Filho,Análise comparativa documental entre diferentes sistemas de desenvolvimento híbrido móvel,Concluído,2017,PIBIFSP,NaN,Indisponível
+-181,Rodrigo Palucci Pantoni,Vaso inteligente automatizado,Concluído,2016,PIVICT,NaN,Indisponível
+-182,Rubens Francisco Ventrici de Souza,"Síntese, caracterização e estudo das propriedades antioxidantes de complexos contendo flavonóides e íons metálicos",Concluído,2016,PIBIFSP,NaN,Indisponível
+-183,Rubens Francisco Ventrici de Souza,"Síntese, caracterização e estudo das propriedades antioxidantes de complexos contendo quercetina e íons chumbo",Concluído,2016,PIVICT,NaN,Indisponível
+-184,Viviane Cristina Garcia de Stefani,Construção de vocabulário para entrevistas de emprego a partir do cinema,Concluído,2016,PIBIFSP,NaN,Indisponível
+-185,Paulo Donato Frighetto,Projeto e construção de um sistema de transmissão,Concluído,2016,PIBIFSP,NaN,Indisponível
+-186,Paulo Donato Frighetto,Projeto e construção de um sistema de suspensão,Concluído,2016,PIBIFSP,NaN,Indisponível
+-187,Estela de Sousa Rossetto,Manufatura de crachás de papel semente usando descarte de papel de escritório do Campus e corantes naturais.,Concluído,2016,PIBIFSP,NaN,Indisponível
+-188,Rosycler Cristina Santos Simão,Um estudo da Cultura e do Clima Organizacional do IFSP –CÂMPUS SERTÃOZINHO,Concluído,2016,PIBIFSP,NaN,Indisponível
+-189,Gisele Baraldi Messiano,Estudo fitoquímico de Plantago major (tanchagem),Concluído,2016,PIBIFSP,NaN,Indisponível
+-190,Maria Beatriz Gameiro Cordeiro,A língua portuguesa nos livros didáticos e em avaliações externas,Concluído,2016,PIBIFSP,NaN,Indisponível
+-191,Amanda Ribeiro Vieira,Análise dos programas de formação docente desenvolvidos por universidades públicas paulistas: um estudo multicaso,Concluído,2016,PIBIFSP,NaN,Indisponível
+-192,Paulo Sérgio Adami,Significando funções exponenciais com experimentos químicos,Concluído,2016,PIVICT,NaN,Indisponível
+-193,Estela de Sousa Rossetto,Botânica no Campus – criação de uma trilha paradidática,Concluído,2016,PIBIFSP,NaN,Indisponível
+-194,Rodrigo Palucci Pantoni,Fabricação e montagem do pré-protótipo para testes experimentais,Concluído,2016,PIBIFSP,NaN,Indisponível
+-195,Rodrigo Palucci Pantoni,Vaso inteligente automatizado,Concluído,2016,PIBIFSP,NaN,Indisponível
+-196,Paulo Sérgio Adami,Significando funções exponenciais com experimentos químicos,Concluído,2016,PIBIFSP,NaN,Indisponível
+-197,Rubens Francisco Ventrici de Souza,"Síntese, caracterização e estudo das propriedades antioxidantes de complexos contendo quercetina e íons chumbo",Concluído,2016,PIBIFSP,NaN,Indisponível
+-198,Paulo Donato Frighetto,Resistência ao impacto de aços médio carbono-baixa liga,Concluído,2016,PIBIFSP,NaN,Indisponível
+-199,Luiz Ricardo,Uma abordagem aplicada ao ensino de Gestão de Recursos Humanos utilizando um Sistema Integrado de Gestão (ERP),Concluído,2016,PIBIFSP,NaN,Indisponível
+-200,Gisele Baraldi Messiano,Estudo fitoquímico de Mentha piperita (hortelã),Concluído,2016,PIBIFSP,NaN,Indisponível
+-201,Rodrigo Palucci Pantoni,Veículo não tripulado comandado por dispositivo móvel,Concluído,2016,PIBIFSP,NaN,Indisponível
+-202,Lucimar Falcão,A Metodologia dos 3 Momentos Pedagógicos como Ferramenta Complementar ao Ensino e à Aprendizagem de Química Geral.,Concluído,2016,PIBIFSP,NaN,Indisponível
+-203,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIVICT,NaN,Indisponível
+-204,Paula Garcia da Costa Petean,Estudo dos métodos fisico-químicos aplicados ao controle de qualidade do leite e derivados,Concluído,2015,PIBIFSP,NaN,Indisponível
+-205,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas em quintais de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
+-206,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas no comércio de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
+-207,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas ruderais encontradas em áreas públicas de Sertãozinho,Concluído,2015,PIBIFSP,NaN,Indisponível
+-208,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
+-209,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
+-210,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIBIFSP,NaN,Indisponível
+-211,Reinaldo Golmia Dante,Desenvolvimento de uma plataforma web de educação para o xadrez,Concluído,2015,PIBIFSP,NaN,Indisponível
+-212,Amanda Ribeiro Vieira,Estudo da viabilidade da implantação de uma empresa júnior no campus Sertãozinho do IFSP,Concluído,2015,PIBIFSP,NaN,Indisponível
+-213,Rodrigo Palucci Pantoni,Transmissor de temperatura ambiente para dispositivo móvel sem fio,Concluído,2015,PIBIFSP,NaN,Indisponível
+-214,Rodrigo Palucci Pantoni,Controle remoro via voz de veículo,Concluído,2015,PIBIFSP,NaN,Indisponível
+-215,Rubens Francisco Ventrici de Souza,Análise do comportamento elétrico de contatos metal/semicondutor em nanofios de germânio submetidos a tratamento térmico em diferentes temperaturas,Concluído,2015,PIBIFSP,NaN,Indisponível
+-216,Amanda Ribeiro Vieira,As contribuições da empresa júnior para o desenvolvimento das competências profissionais do estudante universitário,Concluído,2015,PIBIFSP,NaN,Indisponível
+-217,Luis Ricardo Figueiredo,"Estudos, projetos e dissertações em sistemas de informação e gestão",Concluído,2015,PIBIFSP,NaN,Indisponível
+-218,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - software,Concluído,2015,PIBIFSP,NaN,Indisponível
+-219,Eduardo André Mossin,Desenvolvimento de um computador de bordo para volante automobilístico,Concluído,2015,PIBIFSP,NaN,Indisponível
+-220,Antônio Carlos de Souza,Desenvolvimento de dispositivo para alojamento da Bília,Concluído,2015,PIBIFSP,NaN,Indisponível
+-221,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIVICT,NaN,Indisponível
+-222,Eduardo André Mossin,Contexto e aplicação de virtualização na indústria.,Concluído,2015,PIBIFSP,NaN,Indisponível
+-223,Paula Garcia da Costa Petean,Determinação da cinética de degradação da vitamina C em sucos de fruta pasteurizados,Concluído,2015,PIBIFSP,NaN,Indisponível
+-224,Reinaldo Golmia Dante,Desenvolvimento de uma plataforma web de educação para o xadrez,Concluído,2015,PIVICT,NaN,Indisponível
+-225,Reinaldo Golmia Dante,Estudo do conversor estático CC-CC Buck-Boost não isolado.,Concluído,2015,PIVICT,NaN,Indisponível
+-226,Fabiana Alexandre Ferreira,Ferramentas para gestão de pessoas: análise da estrutura de uma instituição hospitalar de Ribeirão Preto,Concluído,2015,PIBIFSP,NaN,Indisponível
+-227,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas no comércio de Sertãozinho,Concluído,2015,PIVICT,NaN,Indisponível
+-228,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas encontradas em quintais de Sertãozinho,Concluído,2015,PIVICT,NaN,Indisponível
+-229,Eduardo André Mossin,Contexto e aplicação de virtualização na indústria.,Concluído,2015,PIVICT,NaN,Indisponível
+-230,Paula Garcia da Costa Petean,Estudo dos métodos fisico-químicos aplicados ao controle de qualidade do leite e derivados,Concluído,2015,PIVICT,NaN,Indisponível
+-231,Paula Garcia da Costa Petean,Determinação da cinética de degradação da vitamina C em sucos de fruta pasteurizados,Concluído,2015,PIVICT,NaN,Indisponível
+-232,Marcos Eduardo Paron,Estudo fitoquímico de cinco espécies medicinais e aromáticas ruderais encontradas em áreas públicas de Sertãozinho,Concluído,2015,PIVICT,NaN,Indisponível
+-233,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - software,Concluído,2015,PIVICT,NaN,Indisponível
+-234,Eduardo André Mossin,Desenvolvimento de um computador de bordo para volante automobilístico,Concluído,2015,PIVICT,NaN,Indisponível
+-235,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - hardware,Concluído,2014,PIVICT,NaN,Indisponível
+-236,Eduardo André Mossin,Sistema automático para gerenciamento de treinos de natação - hardware,Concluído,2014,PIBIFSP,NaN,Indisponível
+-237,Bruno Gonzaga Teodoro,Determinação e prevalência do índice de adiposidade cental(IAC) dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIFSP,NaN,Indisponível
+-238,Bruno Gonzaga Teodoro,Determinação e prevalência do índice de adiposidade cental(IAC) dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIC-EM,NaN,Indisponível
+-239,Bruno Gonzaga Teodoro,Identificação do risco cardiovascular dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIC-EM,NaN,Indisponível
+-240,Rubens Francisco Ventrici de Souza,A importancia das aulas experimentais no ensino de química para o ensino médio,Concluído,2012,PIBIFSP,NaN,Indisponível
+-241,José Carlos de Souza Kiihl,Modelos estatísticos aplicados,Concluído,2012,PIBIFSP,NaN,Indisponível
+-242,Eduardo André Mossin,Estudo e Criação de um website para gerenciamento de projetos científicos,Concluído,2012,PIBIFSP,NaN,Indisponível
+-243,Eduardo André Mossin,Estudo de sistemas gerenciadores de conteúdo web e implementação de protótipo de um site para cadastro de pesquisas,Concluído,2012,PIBIFSP,NaN,Indisponível
+-244,Bruno Gonzaga Teodoro,Identificação do risco cardiovascular dos servidores do IFSP - Campus Sertãozinho,Concluído,2012,PIBIFSP,NaN,Indisponível
+-245,Luiz Carlos Leal Júnior,Um estudo sobre designs esféricos,Concluído,2012,PIBIFSP,NaN,Indisponível
+-246,Antônio Carlos de Souza,Estudo e aplicação dos conceitos de aerodinâmica em uma aeronave em escala rádio controlada,Concluído,2012,PIBIFSP,NaN,Indisponível
+-247,Eduardo André Mossin,Estudo de sistemas gerenciadores de conteúdo web e implementação de protótipo de um site para cadastro de pesquisas,Concluído,2012,PIBIC-EM,NaN,Indisponível
+-248,Eduardo André Mossin,Estudo e Criação de um website para gerenciamento de projetos científicos,Concluído,2012,PIBIC-EM,NaN,Indisponível
+-249,Eduardo André Mossin,"Propor e aplicar um modelo de gestão para equipe e concepção, desenvolvimento e construçao de aeronave em escala rádio controlada",Concluído,2011,PIBIFSP,NaN,Indisponível
+-250,Antônio Carlos de Souza,Aplicação de ferramentas de melhorias de processos em ambientes de manufatura enxuta,Concluído,2011,PIBIFSP,NaN,Indisponível
+-251,Amanda Ribeiro Vieira,Competências essenciais dos professores da área de gestão: uma análise a partir da perspectiva dos alunos,Concluído,2011,PIBIFSP,NaN,Indisponível
+-252,Antônio Carlos de Souza,Análise de desempenho de uma aeronave em escala rádio controlada,Concluído,2011,PIBITI,NaN,Indisponível
+-253,Reinaldo Golmia Dante,Matemática Para GPS,Concluído,2011,PIVICT,NaN,Indisponível
+-254,Eduardo André Mossin,"Propor e aplicar um modelo de gestão para equipe e concepção, desenvolvimento e construçao de aeronave em escala rádio controlada",Concluído,2011,PIBIC-EM,NaN,Indisponível
+-255,Reinaldo Golmia Dante,Matemática Para GPS,Concluído,2011,PIBIFSP,NaN,Indisponível
+-256,Antônio Carlos de Souza,Análise de desempenho de uma aeronave em escala rádio controlada,Concluído,2011,PIBIFSP,NaN,Indisponível
+-257,João Paulo Colafemina,Projeto de manufatura de lentes Fresnel desenvolvido nos softwares VBA para AutoCad e Inventor,Concluído,2010,PIVICT,NaN,Indisponível
+-258,João Paulo Colafemina,Projeto de manufatura de lentes Fresnel desenvolvido nos softwares VBA para AutoCad e Inventor,Concluído,2010,PIBIFSP,NaN,Indisponível
+-259,Marília Guimarães Pinheiro,Um estudo sobre necessidades de ensaios mecânicos e tecnológicos da região de Sertãozinho-SP,Concluído,2009,PIVICT,NaN,Indisponível
+-260,Marília Guimarães Pinheiro,Um estudo sobre necessidades de ensaios mecânicos e tecnológicos da região de Sertãozinho-SP,Concluído,2009,PIBIFSP,NaN,Indisponível
+-261,Antônio Carlos de Souza,Elaboração de procedimentos de ensaios mecânicos para atender a pesquisas tecnológicas em processos de usinagem,Concluído,2009,PIBIFSP,NaN,Indisponível
 287,Plinio Alexandre dos Santos Caetano,A Representação da Mulher Negra na Literatura Brasileira: Um Diálogo entre 'Olhos d'Água' (1998) de Conceição Evaristo e 'Quarto de Despejo' (1960) de Carolina Maria de Jesus.,Em Seleção,2026,PIBIFSP,"LETRAS (LINGUÍSTICA, LETRAS E ARTES)","O presente projeto propõe uma análise comparativa entre Quarto de Despejo (1960), de Carolina Maria de Jesus, e Olhos d’Água (1998), de Conceição Evaristo, com o objetivo de investigar como essas autoras constroem representações estéticas e políticas da mulher negra na literatura brasileira. A pesquisa parte de uma abordagem qualitativa e bibliográfica, articulando estudos literários, teoria racial e perspectivas de gênero para compreender de que modo as narrativas evidenciam experiências de pobreza, racismo, sexismo e resistência. Busca-se identificar estratégias narrativas que dão visibilidade às vozes marginalizadas, especialmente por meio da escrita diarística e documental de Carolina Maria de Jesus e da escrevivência proposta por Evaristo. Ao evidenciar o papel dessas obras no tensionamento de discursos hegemônicos e na afirmação de identidades negras, espera-se contribuir para debates acadêmicos e pedagógicos sobre a representatividade da mulher negra e fortalecer práticas educacionais comprometidas com a inclusão, a diversidade e a justiça social."
 298,Maria Beatriz Gameiro Cordeiro,Produtos educacionais relativos ao ensino de Língua Portuguesa: uma análise das perspectivas socioeducacionais e políticas,Em Seleção,2026,PIBIFSP,"LETRAS (LINGUÍSTICA, LETRAS E ARTES)","A pesquisa propõe analisar perspectivas socioeducacionais, pressupostos teóricos e didáticos presentes em Produtos Educacionais (PEs) desenvolvidos no ProfEPT e no PROFLETRAS relativos ao tratamento da variação linguística e ao ensino de Língua Portuguesa. Os PEs, exigidos pela CAPES para mestrados profissionais, podem assumir diferentes formatos, como sequências didáticas, aplicativos, jogos, videoaulas ou outros materiais pedagógicos. Parte-se da hipótese de que a maioria dessas produções, baseadas na Sociolinguística e na concepção sociointeracionista de língua, enfatize a apresentação do conceito de variação linguística, a explicação de seus tipos e o combate ao preconceito linguístico, podendo deixar em segundo plano o ensino de aspectos gramaticais e de variantes de prestígio. Assim, busca-se investigar em que medida os PEs analisados contribuem tanto para o enfrentamento do preconceito linguístico quanto para a garantia do direito do estudante ao acesso a formas de linguagem valorizadas socialmente — direito frequentemente assegurado apenas pela escola, conforme Bortoni-Ricardo (2005). Para alcançar esses objetivos, será criado um corpus de PEs com enfoque variacionista e realizada pesquisa bibliográfica baseada na Sociolinguística e na Pedagogia Histórico-Crítica de Saviani (1993). Espera-se que o estudo ofereça subsídios para práticas de ensino comprometidas com a justiça social e com o acesso democrático ao saber sistematizado."
 310,Rinaldo Macedo de Morais,Eficiência algorítmica em experimentos na robótica educativa: para além da tentativa e erro,Em Seleção,2026,PIBIFSP,CIÊNCIA DA COMPUTAÇÃO (CIÊNCIAS EXATAS E DA TERRA),"A robótica educativa tem sido utilizada como estratégia pedagógica inovadora em processos de ensino e aprendizagem, possui uma característica multidisciplinar e tem se apresentado como uma ferramenta lúdica para se desenvolver conceitos de programação e automação. Esse projeto de pesquisa propõe investigar, no contexto da robótica educativa, possíveis melhorias da eficiência algorítmica na programação de movimentos para dois kits educativos utilizados no Campus IFSP Sertãozinho. Como materiais, serão utilizados um kit Lego Education Spike e outro de baixo custo, customizado com uso de módulo programável baseado em Arduíno. O processo inclui (a) estudo e ambientação com os kits, (b) identificação dos algoritmos e movimentos a ser otimizados, (c) busca de melhorias junto a professores de outras áreas de conhecimento e (d) implementação e testes de melhorias, com apresentação dos resultados das versões anteriores (as-is) e otimizadas (to-be) e guia orientativo. Espera-se que essa pesquisa contribua com uma melhoria dos conteúdos trabalhados em componentes curriculares e projetos que envolvem a robótica educativa no campus e com a formação integral do(a) estudante pesquisador(a)."
@@ -408,3 +482,4 @@ index,COORDENADOR,TITULO,SITUACAO,PERIODO,EDITAL,AREA,RESUMO
 14,Francisco de Araujo Silva,Produção de nanofilmes semicondutores a base de naftaleno diimidas para aplicação em dispositivos eletrônicos,Concluído,2021,PIBIFSP,FÍSICO-QUÍMICA ORGÂNICA (QUÍMICA ORGÂNICA (QUÍMICA (CIÊNCIAS EXATAS E DA TERRA))),"Sistemas supramoleculares baseados em moléculas contendo conjugação pi estendida são cada vez mais usados na produção de semicondutores orgânicos. As naftaleno diimidas (NDIs) possuem conjugação pi estendida, são estáveis em suas propriedades físicas e químicas e possuem características elétricas atraentes para aplicações em semicondutores de dispositivos eletrônicos. Neste trabalho será sintetizado a NDI simétrica N,N’-bis[Tris(hidroximetil)aminometano]-1,4,5,8-naftaleno diimida (NDI-triol),  provavelmente uma naftaleno diimida inédita na literatura especializada. Esta molécula será caracterizada por espectroscopia de absorção, FTIR, ¹HRMN e Espectrometria de massas. Esta caracterização será realizada para a molécula discreta em solução e na forma de filmes finos sobre substratos como FTO e carbono vítreo. Serão estudadas as características espectroscópicas na produção de agregados em diferentes soluções e a possibilidade de formação de filmes finos semicondutores destas moléculas a partir dos testes de solubilidade e agregação em diversos solventes.  Com a produção dos filmes faremos ensaios elétricos para análise de semicondução. A ideia da produção desta diimida se baseia na possibilidade de interação entre os naftalenos e ligações de hidrogênio entre os grupos -OH levando a formação de filmes semicondutores para aplicação em dispositivos eletrônicos diversos."
 0,Marcos Alves Fontes,Influência das características do vento na geração de energia elétrica a partir da energia eólica.,Concluído,2021,PIBIFSP,CONVERSÃO E RETIFICAÇÃO DA ENERGIA ELÉTRICA (SISTEMAS ELÉTRICOS DE POTÊNCIA (ENGENHARIA ELÉTRICA (ENGENHARIAS))),"A energia eólica, dentre as diversas fontes de energia renováveis existentes, tem sido, juntamente com a energia fotovoltaica, explorada fortemente como alternativa para substituição e/ou complementação de obtenção de energia elétrica a partir das usinas hidrelétricas. Apesar do impacto visual e sonoro causado pela presença de grandes parques eólicos, diversos benefícios podem ser citados, com destaque para a possibilidade da produção de energia a partir de uma fonte limpa e inesgotável, com baixo impacto ambiental de instalação, quando comparada com as usinas hidrelétricas por exemplo. Estudos mostram que o desempenho ótimo do aerogerador depende de variáveis como a complexidade da topografia local, do clima da região e da variabilidade temporal e espacial do vento. A grande contribuição para a geração de energia elétrica a partir da energia eólica, está diretamente ligada a velocidade do vento no local da instalação. Neste contexto, o objetivo deste trabalho de pesquisa é de verificar a influência de algumas características do vento, como a velocidade de deslocamento da massa de ar, bem como a sua estabilidade e/ou oscilação ao longo de um certo período de tempo, na capacidade de geração de energia elétrica a partir da energia renovável denominada de energia eólica."
 11,Marina Caprio,A compreensão do processo de ensino e aprendizagem a partir da teoria da aprendizagem de Vygotsky.,Concluído,2020,PIBIFSP,PSICOLOGIA DO ENSINO E DA APRENDIZAGEM (PSICOLOGIA (CIÊNCIAS HUMANAS)),"O presente trabalho tem como objetivo compreender a Psicologia Histórico Cultural de Vygostky e demais psicológicos em relação ao processo de ensino e aprendizagem para estudantes adolescentes no ensino médio. O projeto é realizado por meio de estudo bibliográfico, que visa analisar a  referida teoria e a relação com o processo de ensino e aprendizagem. Serão estudados os conceito de formação de conceitos, desenvolvimento e aprendizagem para enfim, correlacionar com o processo de ensino na última etapa da educação básica."
+
