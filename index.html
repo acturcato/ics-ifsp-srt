@@ -1,947 +1,175 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang=pt-BR>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Projetos IC - IFSP-SRT</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-			background: linear-gradient(135deg, #f1f1f1 0%, #d1d1d1 100%);
-            min-height: 100vh;
-        }
-
-        .header {
-            background: #2f9838;
-            color: white;
-            padding: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .header h1 {
-            font-size: 2.0rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .header p {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .sync-status {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .sync-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #10b981;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .config-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .config-card h2 {
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .config-grid {
-            display: grid;
-            grid-template-columns: 1fr auto;
-			grid-template-rows: repeat(6, auto);
-			grid-auto-flow: column;
-			gap: 0px 0px;
-            align-items: end;
-        }
-
-        .config-grid input {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            width: 100%;
-        }
-
-        .config-grid button {
-            padding: 0.75rem 1.5rem;
-            background: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .config-grid button:hover {
-            background: #2563eb;
-        }
-
-        .config-options {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .config-options label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .kpi-card {
-            background: white;
-            padding: 0.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 7px solid;
-        }
-
-        .kpi-card.blue { border-color: #3b82f6; }
-        .kpi-card.green { border-color: #10b981; }
-        .kpi-card.purple { border-color: #8b5cf6; }
-        .kpi-card.orange { border-color: #f59e0b; }
-
-        .kpi-card h3 {
-            font-size: 0.875rem;
-            color: #6b7280;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .kpi-card .value {
-            font-size: 3.0rem;
-            font-weight: bold;
-			text-align: center;
-            color: #1f2937;
-        }
-
-        .filters {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .filters h2 {
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .filter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .filter-grid input,
-        .filter-grid select {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 0.875rem;
-        }
-
-        .filter-grid button {
-            padding: 0.75rem;
-            background: #ef4444;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .filter-grid button:hover {
-            background: #dc2626;
-        }
-		
-		.filter-grid-buttons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-		.filter-grid-buttons button {
-			width: 100%;
-			display: block;
-			padding: 1.00rem;
-            background: #0a0a0a;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .charts-grid {
-            display: grid;
-            <!-- grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); -->
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .chart-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .chart-card h3 {
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .chart-container {
-            position: relative;
-            height: 300px;
-        }
-
-        .table-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th {
-            background: #f9fafb;
-            padding: 0.75rem;
-            text-align: left;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-        }
-
-        td {
-            padding: 0.75rem;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.875rem;
-        }
-
-        tr:hover {
-            background: #d7fcd8;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .badge.concluido { background: #d1fae5; color: #065f46; }
-        .badge.andamento { background: #fef6db; color: #374151; }
-        .badge.selecao { background: #fcd8ca; color: #374151; }
-        .badge.outros { background: #f3f4f6; color: #374151; }
-
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: #6b7280;
-        }
-
-        .error {
-            background: #fee2e2;
-            color: #991b1b;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .charts-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .sync-status {
-                position: static;
-                margin-top: 1rem;
-                justify-content: center;
-            }
-            
-            .config-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+<title>Projetos IC - IFSP-SRT</title>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/chart.js></script>
+<script src=https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:linear-gradient(135deg,#f1f1f1 0,#d1d1d1 100%);min-height:100vh}.header{background:#2f9838;color:white;padding:.5rem;box-shadow:0 4px 6px rgba(0,0,0,0.1);position:relative}.header h1{font-size:2.0rem;margin-bottom:.5rem}.header p{opacity:.9;font-size:1.1rem}.sync-status{position:absolute;top:2rem;right:2rem;background:rgba(255,255,255,0.2);padding:.5rem 1rem;border-radius:8px;font-size:.875rem;display:flex;align-items:center;gap:.5rem}.sync-dot{width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}.container{max-width:1400px;margin:0 auto;padding:2rem}.config-card{background:white;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:2rem}.config-card h2{margin-bottom:1rem;color:#1f2937}.config-grid{display:grid;grid-template-columns:1fr auto;grid-template-rows:repeat(6,auto);grid-auto-flow:column;gap:0;align-items:end}.config-grid input{padding:.75rem;border:1px solid #d1d5db;border-radius:8px;font-size:.875rem;width:100%}.config-grid button{padding:.75rem 1.5rem;background:#3b82f6;color:white;border:0;border-radius:8px;cursor:pointer;font-weight:600;white-space:nowrap}.config-grid button:hover{background:#2563eb}.config-options{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap}.config-options label{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:2rem}.kpi-card{background:white;padding:.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);border-left:7px solid}.kpi-card.blue{border-color:#3b82f6}.kpi-card.green{border-color:#10b981}.kpi-card.purple{border-color:#8b5cf6}.kpi-card.orange{border-color:#f59e0b}.kpi-card h3{font-size:.875rem;color:#6b7280;text-transform:uppercase;margin-bottom:.5rem}.kpi-card .value{font-size:3.0rem;font-weight:bold;text-align:center;color:#1f2937}.filters{background:white;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:2rem}.filters h2{margin-bottom:1rem;color:#1f2937}.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}.filter-grid input,.filter-grid select{padding:.75rem;border:1px solid #d1d5db;border-radius:8px;font-size:.875rem}.filter-grid button{padding:.75rem;background:#ef4444;color:white;border:0;border-radius:8px;cursor:pointer;font-weight:600}.filter-grid button:hover{background:#dc2626}.filter-grid-buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:2rem;margin-bottom:2rem}.filter-grid-buttons button{width:100%;display:block;padding:1.00rem;background:#0a0a0a;color:white;border:0;border-radius:8px;cursor:pointer;font-weight:600}.charts-grid{display:grid;<!-- grid-template-columns:repeat(auto-fit,minmax(500px,1fr));-->grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}.chart-card{background:white;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}.chart-card h3{margin-bottom:1rem;color:#1f2937}.chart-container{position:relative;height:300px}.table-card{background:white;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);overflow-x:auto}table{width:100%;border-collapse:collapse}th{background:#f9fafb;padding:.75rem;text-align:left;font-size:.75rem;font-weight:600;color:#6b7280;text-transform:uppercase}td{padding:.75rem;border-top:1px solid #e5e7eb;font-size:.875rem}tr:hover{background:#d7fcd8}.badge{display:inline-block;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600}.badge.concluido{background:#d1fae5;color:#065f46}.badge.andamento{background:#fef6db;color:#374151}.badge.selecao{background:#fcd8ca;color:#374151}.badge.outros{background:#f3f4f6;color:#374151}.loading{text-align:center;padding:3rem;color:#6b7280}.error{background:#fee2e2;color:#991b1b;padding:1rem;border-radius:8px;margin-bottom:1rem}@media(max-width:768px){.charts-grid{grid-template-columns:1fr}.sync-status{position:static;margin-top:1rem;justify-content:center}.config-grid{grid-template-columns:1fr}}</style>
 </head>
-<body onload="loadFromUrl()">
-    <div class="header">
-		<table style="border: 0; border-collapse: collapse;">
-		<tr style="border: 0;">
-		<td width="40" style="border: 0; text-align: center;">
-        <a href="http://srt.ifsp.edu.br"><img src="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/logoIFSP_H.png" alt="Logo IFSP" width="200" height="60" style="border:0px solid black"></a>
-		</td>
-		</tr>
-		<tr>
-		<td style="border: 0; text-align: center;">
-		<h1>Projetos IC - IFSP-SRT</h1>
-		</td>
-		</tr>
-		</table>
-        <!-- <p>IFSP - Campus Sertãozinho</p> -->
-        <div class="sync-status">
-            <div class="sync-dot"></div>
-            <span id="syncStatus">Carregando...</span>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="config-card" hidden>
-            <h2>⚙️ Configuração da URL do CSV</h2>
-            <div class="config-grid">
-                <input 
-                    type="text" 
-                    id="csvUrl" 
-                    placeholder="Cole aqui a URL do arquivo CSV (ex: https://exemplo.com/ICs_IFSPSRT.csv)"
-                    value="https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/ICs_IFSP-SRT.csv"
-                <button onclick="loadFromUrl()">Carregar Dados</button>
-            </div>
-            <div class="config-options">
-                <label>
-                    <input type="checkbox" id="autoRefresh" checked>
-                    Atualizar automaticamente
-                </label>
-                <label>
-                    Intervalo:
-                    <select id="refreshInterval">
-                        <option value="30">30 segundos</option>
-                        <option value="60">1 minuto</option>
-                        <option value="300">5 minutos</option>
-                        <option value="600" selected>10 minutos</option>
-                        <option value="1800">30 minutos</option>
-                    </select>
-                </label>
-            </div>
-            <p style="margin-top: 1rem; font-size: 0.875rem; color: #6b7280;">
-                💡 <strong>Dica:</strong> Para hospedar seu CSV online gratuitamente, use GitHub, Google Drive (link público), ou Dropbox.
-            </p>
-        </div>
-
-        <div id="errorMessage" style="display: none;" class="error"></div>
-
-        <div id="dashboard" style="display: none;">
-            <div class="kpi-grid">
-                <div class="kpi-card blue">
-                    <h3>Total de Projetos</h3>
-                    <div class="value" id="totalProjetos">0</div>
-                </div>
-                <div class="kpi-card green">
-                    <h3>Coordenadores</h3>
-                    <div class="value" id="totalCoordenadores">0</div>
-                </div>
-                <div class="kpi-card purple">
-                    <h3>Editais</h3>
-                    <div class="value" id="totalEditais">0</div>
-                </div>
-                <div class="kpi-card orange">
-                    <h3>Anos</h3>
-                    <div class="value" id="totalPeriodos">0</div>
-                </div>
-            </div>
-
-            <div class="filters">
-                <h2>🔍 Filtros</h2>
-                <div class="filter-grid">
-                    <input type="text" id="searchInput" placeholder="Buscar título/coordenador/área...">
-                    <select id="situacaoFilter">
-                        <option value="">Todas as Situações</option>
-                    </select>
-                    <select id="periodoFilter">
-                        <option value="">Todos os Anos</option>
-                    </select>
-                    <select id="editalFilter">
-                        <option value="">Todos os Editais</option>
-                    </select>
-                    <button onclick="resetFilters()">Limpar Filtros</button>
-                </div>
-            </div>
-
-            <div class="charts-grid">
-                <div class="chart-card">
-                    <h3>Situação dos Projetos</h3>
-                    <div class="chart-container">
-                        <canvas id="situacaoChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-card">
-                    <h3>Projetos por Ano</h3>
-                    <div class="chart-container">
-                        <canvas id="periodoChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-card">
-                    <h3>Editais</h3>
-                    <div class="chart-container">
-                        <canvas id="editalChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-card" hidden>
-                    <h3>Top 10 Coordenadores</h3>
-                    <div class="chart-container">
-                        <canvas id="coordenadorChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-			<div class="table-card filter-grid-buttons filter-grid-buttons">
-				<h3>Ordenar tabela por:</h3>
-                <table id="botoesTable">
-					    <thead>
-                            <th><button onclick="ordenaTabelaPorCoordenador_DESC()">Coordenador &#x21e7</button></th>
-                            <th><button onclick="ordenaTabelaPorCoordenador_ASC()">Coordenador &#x21e9</button></th>
-                            <th><button onclick="ordenaTabelaPorAno_DESC()">Ano &#x21e7</button></th>
-                            <th><button onclick="ordenaTabelaPorAno_ASC()">Ano &#x21e9</button></th>
-						</thead>
-						<tbody></tbody>
-                </table>
-            </div>
-
-
-            <div class="table-card">
-                <h3>Lista de Projetos (<span id="totalFiltrados">0</span>)</h3>
-                <table id="projetosTable">
-                    <thead>
-                        <tr>
-                            <th>Título</th>
-                            <th>Coordenador</th>
-                            <th>Situação</th>
-                            <th>Ano</th>
-                            <th>Edital</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let allData = [];
-        let filteredData = [];
-		let filteredData_sorted = [];
-        let charts = {};
-        let refreshTimer = null;
-
-        function updateSyncStatus(message, isError = false) {
-            const status = document.getElementById('syncStatus');
-            status.textContent = message;
-            if (isError) {
-                status.style.color = '#fee2e2';
-            } else {
-                status.style.color = 'white';
-            }
-        }
-
-        function showError(message) {
-            const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
-            setTimeout(() => {
-                errorDiv.style.display = 'none';
-            }, 5000);
-        }
-
-        async function loadFromUrl() {
-            const url = document.getElementById('csvUrl').value.trim();
-            
-            if (!url) {
-                showError('Por favor, insira uma URL válida do arquivo CSV.');
-                return;
-            }
-
-            updateSyncStatus('Carregando dados...');
-
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`Erro HTTP: ${response.status}`);
-                }
-                
-                const csvText = await response.text();
-                
-                Papa.parse(csvText, {
-                    header: true,
-                    dynamicTyping: true,
-                    skipEmptyLines: true,
-                    complete: function(results) {
-                        if (results.data && results.data.length > 0) {
-                            allData = results.data;
-                            filteredData = allData;
-							filteredData_sorted = filteredData;
-                            
-							initDashboard();
-                            document.getElementById('dashboard').style.display = 'block';
-                            
-                            const now = new Date().toLocaleTimeString('pt-BR');
-                            updateSyncStatus(`Última atualização: ${now}`);
-                            
-                            // Salvar URL no localStorage
-                            localStorage.setItem('csvUrl', url);
-                            
-                            // Iniciar atualização automática
-                            startAutoRefresh();
-                        } else {
-                            throw new Error('CSV vazio ou inválido');
-                        }
-                    },
-                    error: function(error) {
-                        throw error;
-                    }
-                });
-            } catch (error) {
-                console.error('Erro ao carregar CSV:', error);
-                showError('Erro ao carregar o arquivo CSV. Verifique a URL e tente novamente.');
-                updateSyncStatus('Erro ao carregar', true);
-            }
-        }
-
-        function startAutoRefresh() {
-            if (refreshTimer) {
-                clearInterval(refreshTimer);
-            }
-
-            const autoRefresh = document.getElementById('autoRefresh').checked;
-            const interval = parseInt(document.getElementById('refreshInterval').value) * 1000;
-
-            if (autoRefresh) {
-                refreshTimer = setInterval(() => {
-                    loadFromUrl();
-                }, interval);
-            }
-        }
-
-        // Event listeners para configuração
-        document.getElementById('autoRefresh').addEventListener('change', startAutoRefresh);
-        document.getElementById('refreshInterval').addEventListener('change', startAutoRefresh);
-
-		//Limpa o cache
-		//localStorage.clear();
-
-        // Carregar URL salva ao iniciar
-        window.addEventListener('load', () => {
-            const savedUrl = localStorage.getItem('csvUrl');
-            if (savedUrl) {
-                document.getElementById('csvUrl').value = savedUrl;
-                loadFromUrl();
-            }
-        });
-
-        function initDashboard() {
-            Chart.register(ChartDataLabels);
-			
-			populateFilters();
-            updateDashboard();
-            setupEventListeners();
-        }
-
-        function populateFilters() {
-            const situacoes = [...new Set(allData.map(d => d.SITUACAO).filter(Boolean))];
-            const periodos = [...new Set(allData.map(d => d.PERIODO).filter(Boolean))].sort();
-            const editais = [...new Set(allData.map(d => d.EDITAL).filter(Boolean))];
-
-            const situacaoSelect = document.getElementById('situacaoFilter');
-            situacaoSelect.innerHTML = '<option value="">Todas as Situações</option>';
-            situacoes.forEach(s => {
-                const option = document.createElement('option');
-                option.value = s;
-                option.textContent = s;
-                situacaoSelect.appendChild(option);
-            });
-			//Seta o EM EXECUÇÃO como opção inicial selecionada e aplica o filtro
-			situacaoSelect.value = "Em execução";
-			applyFilters();
-
-            const periodoSelect = document.getElementById('periodoFilter');
-            periodoSelect.innerHTML = '<option value="">Todos os Anos</option>';
-            periodos.forEach(p => {
-                const option = document.createElement('option');
-                option.value = p;
-                option.textContent = p;
-                periodoSelect.appendChild(option);
-            });
-
-            const editalSelect = document.getElementById('editalFilter');
-            editalSelect.innerHTML = '<option value="">Todos os Editais</option>';
-            editais.forEach(e => {
-                const option = document.createElement('option');
-                option.value = e;
-                option.textContent = e;
-                editalSelect.appendChild(option);
-            });
-        }
-
-        function setupEventListeners() {
-            document.getElementById('searchInput').addEventListener('input', applyFilters);
-            document.getElementById('situacaoFilter').addEventListener('change', applyFilters);
-            document.getElementById('periodoFilter').addEventListener('change', applyFilters);
-            document.getElementById('editalFilter').addEventListener('change', applyFilters);
-        }
-
-        function applyFilters() {
-            const search = document.getElementById('searchInput').value.toLowerCase();
-            const situacao = document.getElementById('situacaoFilter').value;
-            const periodo = document.getElementById('periodoFilter').value;
-            const edital = document.getElementById('editalFilter').value;
-
-            filteredData = allData.filter(item => {
-                const matchSearch = !search || 
-                    (item.TITULO && item.TITULO.toLowerCase().includes(search)) ||
-                    (item.COORDENADOR && item.COORDENADOR.toLowerCase().includes(search)) ||
-                    (item.AREA && item.AREA.toLowerCase().includes(search));
-                const matchSituacao = !situacao || item.SITUACAO === situacao;
-                const matchPeriodo = !periodo || item.PERIODO == periodo;
-                const matchEdital = !edital || item.EDITAL === edital;
-
-                return matchSearch && matchSituacao && matchPeriodo && matchEdital;
-            });
-
-			filteredData_sorted = filteredData;
-            updateDashboard();
-			ordenaTabelaPorAno_DESC()
-        }
-
-        function resetFilters() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('situacaoFilter').value = '';
-            document.getElementById('periodoFilter').value = '';
-            document.getElementById('editalFilter').value = '';
-            filteredData = allData;
-			
-			filteredData_sorted = filteredData;
-            updateDashboard();
-			ordenaTabelaPorAno_DESC()
-        }
-
-        function updateDashboard() {
-            updateKPIs();
-            updateCharts();
-            updateTable();
-        }
-
-        function updateKPIs() {
-            document.getElementById('totalProjetos').textContent = filteredData.length;
-            document.getElementById('totalCoordenadores').textContent = 
-                new Set(filteredData.map(d => d.COORDENADOR).filter(Boolean)).size;
-            document.getElementById('totalEditais').textContent = 
-                new Set(filteredData.map(d => d.EDITAL).filter(Boolean)).size;
-            document.getElementById('totalPeriodos').textContent = 
-                new Set(filteredData.map(d => d.PERIODO).filter(Boolean)).size;
-        }
-
-        function updateCharts() {
-            updateSituacaoChart();
-            updatePeriodoChart();
-            updateEditalChart();
-            updateCoordenadorChart();
-        }
-
-        function updateSituacaoChart() {
-            const counts = {};
-            filteredData.forEach(d => {
-                const sit = d.SITUACAO || 'Não informado';
-                counts[sit] = (counts[sit] || 0) + 1;
-            });
-
-            const ctx = document.getElementById('situacaoChart').getContext('2d');
-            if (charts.situacao) charts.situacao.destroy();
-
-            charts.situacao = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: Object.keys(counts),
-                    datasets: [{
-                        data: Object.values(counts),
-                        backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'bottom' },
-						datalabels: {
-							color: 'white', // Color of the labels
-							font: {
-								weight: 'bold',
-							},
-							formatter: function (value, context) {
-								return value; // Display the actual data value
-							}
-						}
-                    }
-                }
-            });
-        }
-
-        function updatePeriodoChart() {
-            const counts = {};
-            filteredData.forEach(d => {
-                if (d.PERIODO) counts[d.PERIODO] = (counts[d.PERIODO] || 0) + 1;
-            });
-
-            const sorted = Object.entries(counts).sort((a, b) => b[0] - a[0]);
-
-            const ctx = document.getElementById('periodoChart').getContext('2d');
-            if (charts.periodo) charts.periodo.destroy();
-			
-            charts.periodo = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(s => s[0]),
-                    datasets: [{
-                        label: 'Projetos',
-                        data: sorted.map(s => s[1]),
-						borderWidth: 0,
-                        borderColor: '#3b82f6',
-                        backgroundColor: 'rgba(0, 0, 246, 0.5)',
-                        tension: 0.4
-                    }]
-                },
-				options: {
-					<!-- indexAxis: 'y', -->
-                    responsive: true,
-                    maintainAspectRatio: false,
-					plugins: {
-						legend: { display: false },
-						<!-- title: { -->
-							<!-- display: true, -->
-							<!-- text: 'Release Year of Web Frameworks', -->
-							<!-- color: 'black', -->
-							<!-- font: { -->
-								<!-- weight: 'bold', -->
-								<!-- size: 20 -->
-							<!-- } -->
-						<!-- }, -->
-						datalabels: {
-							anchor: 'end', // Position of the labels (start, end, center, etc.)
-							align: 'end', // Alignment of the labels (start, end, center, etc.)
-							color: 'gray', // Color of the labels
-							font: {
-								weight: 'bold',
-							},
-							formatter: function (value, context) {
-								return value; // Display the actual data value
-							}
-						}
-					}
-				}
-            });
-        }
-
-        function updateEditalChart() {
-            const counts = {};
-            filteredData.forEach(d => {
-                if (d.EDITAL) counts[d.EDITAL] = (counts[d.EDITAL] || 0) + 1;
-            });
-
-            const sorted = Object.entries(counts)
-                .sort((a, b) => b[1] - a[1])
-                //.slice(0, 10);	//seleciona o TOP10
-
-            const ctx = document.getElementById('editalChart').getContext('2d');
-            if (charts.edital) charts.edital.destroy();
-
-            charts.edital = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(s => s[0]),
-                    datasets: [{
-                        label: 'Projetos',
-                        data: sorted.map(s => s[1]),
-                        backgroundColor: '#10b981'
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-						datalabels: {
-							anchor: 'end', // Position of the labels (start, end, center, etc.)
-							align: 'end', // Alignment of the labels (start, end, center, etc.)
-							color: 'gray', // Color of the labels
-							font: {
-								weight: 'bold',
-							},
-							formatter: function (value, context) {
-								return value; // Display the actual data value
-							}
-						}
-                    }
-                }
-            });
-        }
-
-        function updateCoordenadorChart() {
-            const counts = {};
-            filteredData.forEach(d => {
-                if (d.COORDENADOR) counts[d.COORDENADOR] = (counts[d.COORDENADOR] || 0) + 1;
-            });
-
-            const sorted = Object.entries(counts)
-                .sort((a, b) => b[1] - a[1])
-                .slice(0, 10);
-
-            const ctx = document.getElementById('coordenadorChart').getContext('2d');
-            if (charts.coordenador) charts.coordenador.destroy();
-
-            charts.coordenador = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(s => s[0]),
-                    datasets: [{
-                        label: 'Projetos',
-                        data: sorted.map(s => s[1]),
-                        backgroundColor: '#8b5cf6'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-        }
-
-		function ordenaTabelaPorCoordenador_DESC() {	
-			//Ordena por Coordenador
-			filteredData_sorted = Array.from(filteredData).sort((b, a) => {
-			  return (a.COORDENADOR.localeCompare(b.COORDENADOR) || (a.PERIODO - b.PERIODO));
-			});
-			updateTable();
-		}
-
-		function ordenaTabelaPorCoordenador_ASC() {	
-			//Ordena por Coordenador
-			filteredData_sorted = Array.from(filteredData).sort((a, b) => {
-			  return (a.COORDENADOR.localeCompare(b.COORDENADOR) || (a.PERIODO - b.PERIODO));
-			});
-			updateTable();
-		}
-		
-		function ordenaTabelaPorAno_DESC() {
-			//Ordena por Ano
-			filteredData_sorted = Array.from(filteredData).sort((b, a) => {
-			  return a.PERIODO - b.PERIODO;
-			});
-			updateTable();
-		}
-		
-		function ordenaTabelaPorAno_ASC() {
-			//Ordena por Ano
-			filteredData_sorted = Array.from(filteredData).sort((a, b) => {
-			  return a.PERIODO - b.PERIODO;
-			});
-			updateTable();
-		}
-
-        function updateTable() {
-            document.getElementById('totalFiltrados').textContent = filteredData.length;
-            const tbody = document.querySelector('#projetosTable tbody');
-            tbody.innerHTML = '';
-			
-			//Ordena por Coordenador
-			<!-- sortedFilteredData = Array.from(filteredData).sort((a, b) => { -->
-			  <!-- return a.COORDENADOR.localeCompare(b.COORDENADOR); -->
-			<!-- }); -->
-			
-			// Pega os valores ordenados
-			sortedFilteredData = filteredData_sorted;
-
-            sortedFilteredData.slice(0, 50).forEach(item => {
-                const tr = document.createElement('tr');
-                
-                let badgeClass = 'outros';
-                if (item.SITUACAO === 'Concluído') badgeClass = 'concluido';
-                else if (item.SITUACAO === 'Em execução') badgeClass = 'andamento';
-				else if (item.SITUACAO === 'Em Seleção') badgeClass = 'selecao';
-				
-				tr.title = "ÁREA: " + item.AREA + "\r\n" + item.RESUMO;
-				
-                tr.innerHTML = `
-                    <td>${item.TITULO || ''}</td>
-                    <td>${item.COORDENADOR || ''}</td>
-                    <td><span class="badge ${badgeClass}">${item.SITUACAO || ''}</span></td>
-                    <td>${item.PERIODO || ''}</td>
-                    <td>${item.EDITAL || ''}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-
-            if (filteredData.length > 100) {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `<td colspan="5" style="text-align: center; color: #6b7280;">
-                    Mostrando 50 de ${filteredData.length} projetos
-                </td>`;
-                tbody.appendChild(tr);
-            }
-        }
-    </script>
+<body onload=loadFromUrl()>
+<div class=header>
+<table style=border:0;border-collapse:collapse>
+<tr style=border:0>
+<td width=40 style=border:0;text-align:center>
+<a href=http://srt.ifsp.edu.br><img src=https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/logoIFSP_H.png alt="Logo IFSP" width=200 height=60 style="border:0 solid black"></a>
+</td>
+</tr>
+<tr>
+<td style=border:0;text-align:center>
+<h1>Projetos IC - IFSP-SRT</h1>
+</td>
+</tr>
+</table>
+<div class=sync-status>
+<div class=sync-dot></div>
+<span id=syncStatus>Carregando...</span>
+</div>
+</div>
+<div class=container>
+<div class=config-card hidden>
+<h2>⚙️ Configuração da URL do CSV</h2>
+<div class=config-grid>
+<input type=text id=csvUrl placeholder="Cole aqui a URL do arquivo CSV (ex: https://exemplo.com/ICs_IFSPSRT.csv)" value=https://raw.githubusercontent.com/acturcato/ics-ifsp-srt/refs/heads/main/ICs_IFSP-SRT.csv <button onclick=loadFromUrl()>Carregar Dados</button>
+</div>
+<div class=config-options>
+<label>
+<input type=checkbox id=autoRefresh checked>
+Atualizar automaticamente
+</label>
+<label>
+Intervalo:
+<select id=refreshInterval>
+<option value=30>30 segundos</option>
+<option value=60>1 minuto</option>
+<option value=300>5 minutos</option>
+<option value=600 selected>10 minutos</option>
+<option value=1800>30 minutos</option>
+</select>
+</label>
+</div>
+<p style=margin-top:1rem;font-size:.875rem;color:#6b7280>
+💡 <strong>Dica:</strong> Para hospedar seu CSV online gratuitamente, use GitHub, Google Drive (link público), ou Dropbox.
+</p>
+</div>
+<div id=errorMessage style=display:none class=error></div>
+<div id=dashboard style=display:none>
+<div class=kpi-grid>
+<div class="kpi-card blue">
+<h3>Total de Projetos</h3>
+<div class=value id=totalProjetos>0</div>
+</div>
+<div class="kpi-card green">
+<h3>Coordenadores</h3>
+<div class=value id=totalCoordenadores>0</div>
+</div>
+<div class="kpi-card purple">
+<h3>Editais</h3>
+<div class=value id=totalEditais>0</div>
+</div>
+<div class="kpi-card orange">
+<h3>Anos</h3>
+<div class=value id=totalPeriodos>0</div>
+</div>
+</div>
+<div class=filters>
+<h2>🔍 Filtros</h2>
+<div class=filter-grid>
+<input type=text id=searchInput placeholder="Buscar título/coordenador/área...">
+<select id=situacaoFilter>
+<option value>Todas as Situações</option>
+</select>
+<select id=periodoFilter>
+<option value>Todos os Anos</option>
+</select>
+<select id=editalFilter>
+<option value>Todos os Editais</option>
+</select>
+<button onclick=resetFilters()>Limpar Filtros</button>
+</div>
+</div>
+<div class=charts-grid>
+<div class=chart-card>
+<h3>Editais</h3>
+<div class=chart-container>
+<canvas id=editalChart></canvas>
+</div>
+</div>
+<div class=chart-card>
+<h3>Projetos por Ano</h3>
+<div class=chart-container>
+<canvas id=periodoChart></canvas>
+</div>
+</div>
+<div class=chart-card>
+<h3>Situação dos Projetos</h3>
+<div class=chart-container>
+<canvas id=situacaoChart></canvas>
+</div>
+</div>
+<div class=chart-card hidden>
+<h3>Top 10 Coordenadores</h3>
+<div class=chart-container>
+<canvas id=coordenadorChart></canvas>
+</div>
+</div>
+</div>
+<div class="table-card filter-grid-buttons filter-grid-buttons">
+<h3>Ordenar tabela por:</h3>
+<table id=botoesTable>
+<thead>
+<th><button onclick=ordenaTabelaPorCoordenador_DESC()>Coordenador &#x21e7</button></th>
+<th><button onclick=ordenaTabelaPorCoordenador_ASC()>Coordenador &#x21e9</button></th>
+<th><button onclick=ordenaTabelaPorAno_DESC()>Ano &#x21e7</button></th>
+<th><button onclick=ordenaTabelaPorAno_ASC()>Ano &#x21e9</button></th>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+<div class=table-card>
+<h3>Lista de Projetos (<span id=totalFiltrados>0</span>)</h3>
+<table id=projetosTable>
+<thead>
+<tr>
+<th>Título</th>
+<th>Coordenador</th>
+<th>Situação</th>
+<th>Ano</th>
+<th>Edital</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</div>
+<script>let allData=[];let filteredData=[];let filteredData_sorted=[];let charts={};let refreshTimer=null;function updateSyncStatus(message,isError=false){const status=document.getElementById('syncStatus');status.textContent=message;if(isError){status.style.color='#fee2e2';}else{status.style.color='white';}}
+function showError(message){const errorDiv=document.getElementById('errorMessage');errorDiv.textContent=message;errorDiv.style.display='block';setTimeout(()=>{errorDiv.style.display='none';},5000);}
+async function loadFromUrl(){const url=document.getElementById('csvUrl').value.trim();if(!url){showError('Por favor, insira uma URL válida do arquivo CSV.');return;}
+updateSyncStatus('Carregando dados...');try{const response=await fetch(url);if(!response.ok){throw new Error(`Erro HTTP:${response.status}`);}
+const csvText=await response.text();Papa.parse(csvText,{header:true,dynamicTyping:true,skipEmptyLines:true,complete:function(results){if(results.data&&results.data.length>0){allData=results.data;filteredData=allData;filteredData_sorted=filteredData;initDashboard();document.getElementById('dashboard').style.display='block';const now=new Date().toLocaleTimeString('pt-BR');updateSyncStatus(`Última atualização:${now}`);localStorage.setItem('csvUrl',url);startAutoRefresh();}else{throw new Error('CSV vazio ou inválido');}},error:function(error){throw error;}});}catch(error){console.error('Erro ao carregar CSV:',error);showError('Erro ao carregar o arquivo CSV. Verifique a URL e tente novamente.');updateSyncStatus('Erro ao carregar',true);}}
+function startAutoRefresh(){if(refreshTimer){clearInterval(refreshTimer);}
+const autoRefresh=document.getElementById('autoRefresh').checked;const interval=parseInt(document.getElementById('refreshInterval').value)*1000;if(autoRefresh){refreshTimer=setInterval(()=>{loadFromUrl();},interval);}}
+document.getElementById('autoRefresh').addEventListener('change',startAutoRefresh);document.getElementById('refreshInterval').addEventListener('change',startAutoRefresh);window.addEventListener('load',()=>{const savedUrl=localStorage.getItem('csvUrl');if(savedUrl){document.getElementById('csvUrl').value=savedUrl;loadFromUrl();}});function initDashboard(){Chart.register(ChartDataLabels);populateFilters();updateDashboard();setupEventListeners();}
+function populateFilters(){const situacoes=[...new Set(allData.map(d=>d.SITUACAO).filter(Boolean))];const periodos=[...new Set(allData.map(d=>d.PERIODO).filter(Boolean))].sort();const editais=[...new Set(allData.map(d=>d.EDITAL).filter(Boolean))];const situacaoSelect=document.getElementById('situacaoFilter');situacaoSelect.innerHTML='<option value="">Todas as Situações</option>';situacoes.forEach(s=>{const option=document.createElement('option');option.value=s;option.textContent=s;situacaoSelect.appendChild(option);});situacaoSelect.value="Em execução";applyFilters();const periodoSelect=document.getElementById('periodoFilter');periodoSelect.innerHTML='<option value="">Todos os Anos</option>';periodos.forEach(p=>{const option=document.createElement('option');option.value=p;option.textContent=p;periodoSelect.appendChild(option);});const editalSelect=document.getElementById('editalFilter');editalSelect.innerHTML='<option value="">Todos os Editais</option>';editais.forEach(e=>{const option=document.createElement('option');option.value=e;option.textContent=e;editalSelect.appendChild(option);});}
+function setupEventListeners(){document.getElementById('searchInput').addEventListener('input',applyFilters);document.getElementById('situacaoFilter').addEventListener('change',applyFilters);document.getElementById('periodoFilter').addEventListener('change',applyFilters);document.getElementById('editalFilter').addEventListener('change',applyFilters);}
+function applyFilters(){const search=document.getElementById('searchInput').value.toLowerCase();const situacao=document.getElementById('situacaoFilter').value;const periodo=document.getElementById('periodoFilter').value;const edital=document.getElementById('editalFilter').value;filteredData=allData.filter(item=>{const matchSearch=!search||(item.TITULO&&item.TITULO.toLowerCase().includes(search))||(item.COORDENADOR&&item.COORDENADOR.toLowerCase().includes(search))||(item.AREA&&item.AREA.toLowerCase().includes(search));const matchSituacao=!situacao||item.SITUACAO===situacao;const matchPeriodo=!periodo||item.PERIODO==periodo;const matchEdital=!edital||item.EDITAL===edital;return matchSearch&&matchSituacao&&matchPeriodo&&matchEdital;});filteredData_sorted=filteredData;updateDashboard();ordenaTabelaPorAno_DESC()}
+function resetFilters(){document.getElementById('searchInput').value='';document.getElementById('situacaoFilter').value='';document.getElementById('periodoFilter').value='';document.getElementById('editalFilter').value='';filteredData=allData;filteredData_sorted=filteredData;updateDashboard();ordenaTabelaPorAno_DESC()}
+function updateDashboard(){updateKPIs();updateCharts();updateTable();}
+function updateKPIs(){document.getElementById('totalProjetos').textContent=filteredData.length;document.getElementById('totalCoordenadores').textContent=new Set(filteredData.map(d=>d.COORDENADOR).filter(Boolean)).size;document.getElementById('totalEditais').textContent=new Set(filteredData.map(d=>d.EDITAL).filter(Boolean)).size;document.getElementById('totalPeriodos').textContent=new Set(filteredData.map(d=>d.PERIODO).filter(Boolean)).size;}
+function updateCharts(){updateSituacaoChart();updatePeriodoChart();updateEditalChart();updateCoordenadorChart();}
+function updateSituacaoChart(){const counts={};filteredData.forEach(d=>{const sit=d.SITUACAO||'Não informado';counts[sit]=(counts[sit]||0)+1;});const ctx=document.getElementById('situacaoChart').getContext('2d');if(charts.situacao)charts.situacao.destroy();charts.situacao=new Chart(ctx,{type:'pie',data:{labels:Object.keys(counts),datasets:[{data:Object.values(counts),backgroundColor:['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'},datalabels:{color:'white',font:{weight:'bold',},formatter:function(value,context){return value;}}}}});}
+function updatePeriodoChart(){const counts={};filteredData.forEach(d=>{if(d.PERIODO)counts[d.PERIODO]=(counts[d.PERIODO]||0)+1;});const sorted=Object.entries(counts).sort((a,b)=>a[0]-b[0]);const ctx=document.getElementById('periodoChart').getContext('2d');if(charts.periodo)charts.periodo.destroy();charts.periodo=new Chart(ctx,{type:'bar',data:{labels:sorted.map(s=>s[0]),datasets:[{label:'Projetos',data:sorted.map(s=>s[1]),borderWidth:0,borderColor:'#3b82f6',backgroundColor:'rgba(252, 100, 33, 0.7)',tension:0.4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'center',align:'end',color:'black',font:{weight:'bold',},formatter:function(value,context){return value;}}}}});}
+function updateEditalChart(){const counts={};filteredData.forEach(d=>{if(d.EDITAL)counts[d.EDITAL]=(counts[d.EDITAL]||0)+1;});const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1])
+const ctx=document.getElementById('editalChart').getContext('2d');if(charts.edital)charts.edital.destroy();charts.edital=new Chart(ctx,{type:'bar',data:{labels:sorted.map(s=>s[0]),datasets:[{label:'Projetos',data:sorted.map(s=>s[1]),backgroundColor:'#10b981'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'center',align:'end',color:'black',font:{weight:'bold',},formatter:function(value,context){return value;}}}}});}
+function updateCoordenadorChart(){const counts={};filteredData.forEach(d=>{if(d.COORDENADOR)counts[d.COORDENADOR]=(counts[d.COORDENADOR]||0)+1;});const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,10);const ctx=document.getElementById('coordenadorChart').getContext('2d');if(charts.coordenador)charts.coordenador.destroy();charts.coordenador=new Chart(ctx,{type:'bar',data:{labels:sorted.map(s=>s[0]),datasets:[{label:'Projetos',data:sorted.map(s=>s[1]),backgroundColor:'#8b5cf6'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});}
+function ordenaTabelaPorCoordenador_DESC(){filteredData_sorted=Array.from(filteredData).sort((b,a)=>{return(a.COORDENADOR.localeCompare(b.COORDENADOR)||(a.PERIODO-b.PERIODO));});updateTable();}
+function ordenaTabelaPorCoordenador_ASC(){filteredData_sorted=Array.from(filteredData).sort((a,b)=>{return(a.COORDENADOR.localeCompare(b.COORDENADOR)||(a.PERIODO-b.PERIODO));});updateTable();}
+function ordenaTabelaPorAno_DESC(){filteredData_sorted=Array.from(filteredData).sort((b,a)=>{return a.PERIODO-b.PERIODO;});updateTable();}
+function ordenaTabelaPorAno_ASC(){filteredData_sorted=Array.from(filteredData).sort((a,b)=>{return a.PERIODO-b.PERIODO;});updateTable();}
+function updateTable(){document.getElementById('totalFiltrados').textContent=filteredData.length;const tbody=document.querySelector('#projetosTable tbody');tbody.innerHTML='';sortedFilteredData=filteredData_sorted;sortedFilteredData.slice(0,50).forEach(item=>{const tr=document.createElement('tr');let badgeClass='outros';if(item.SITUACAO==='Concluído')badgeClass='concluido';else if(item.SITUACAO==='Em execução')badgeClass='andamento';else if(item.SITUACAO==='Em Seleção')badgeClass='selecao';tr.title="ÁREA: "+item.AREA+"\r\n"+item.RESUMO;tr.innerHTML=`<td>${item.TITULO||''}</td><td>${item.COORDENADOR||''}</td><td><span class="badge ${badgeClass}">${item.SITUACAO||''}</span></td><td>${item.PERIODO||''}</td><td>${item.EDITAL||''}</td>`;tbody.appendChild(tr);});if(filteredData.length>100){const tr=document.createElement('tr');tr.innerHTML=`<td colspan="5"style="text-align: center; color: #6b7280;">Mostrando 50 de ${filteredData.length}projetos</td>`;tbody.appendChild(tr);}}</script>
 </body>
 </html>
